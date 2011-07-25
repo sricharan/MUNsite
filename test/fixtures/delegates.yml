@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mun_as_delegate_count: 1
+  mun_as_exec_count: 1
+  committee_1: MyString
+  country_1_1: MyString
+  country_1_2: MyString
+  committee_2: MyString
+  country_2_1: MyString
+  country_2_2: MyString
+
+two:
+  mun_as_delegate_count: 1
+  mun_as_exec_count: 1
+  committee_1: MyString
+  country_1_1: MyString
+  country_1_2: MyString
+  committee_2: MyString
+  country_2_1: MyString
+  country_2_2: MyString

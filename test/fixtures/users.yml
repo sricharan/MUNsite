@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  full_name: MyString
+  email: MyString
+  mobile: MyString
+  institution: MyString
+  country: MyString
+  city: MyString
+  type: MyString
+
+two:
+  full_name: MyString
+  email: MyString
+  mobile: MyString
+  institution: MyString
+  country: MyString
+  city: MyString
+  type: MyString

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mun_as_press_count: 1
+  experience: MyText
+  role: MyString
+  headline: MyString
+  content: MyText
+
+two:
+  mun_as_press_count: 1
+  experience: MyText
+  role: MyString
+  headline: MyString
+  content: MyText
