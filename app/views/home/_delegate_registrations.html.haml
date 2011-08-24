@@ -1,0 +1,43 @@
+- form_for @delegate do |delegate|
+  = delegate.fields_for @user do |user|
+    %b Full Name
+    %br
+    = user.text_field :full_name 
+    %br
+    %br 
+    %b Email
+    %br 
+    = user.text_field :email  
+    %br 
+    %br 
+    %b Mobile Number 
+    %br 
+    = user.text_field :mobile  
+    %br 
+    %br 
+    %b Institution
+    %br 
+    = user.text_field :institution  
+    %br 
+    %br 
+    %b Country
+    %br 
+    = user.text_field :country  
+    %br 
+    %br 
+    %b City
+    %br 
+    = user.text_field :city  
+    %br 
+    %br 
+  = delegate.text_field :mun_as_delegate_count
+  = delegate.text_field :mun_as_exec_count
+  = delegate.text_field :committee_1
+  = delegate.text_field :country_1_1
+  = delegate.text_field :country_1_2
+  = delegate.text_field :committee_2
+  = delegate.text_field :country_2_1
+  = delegate.text_field :country_2_2
+  = delegate.submit
+
+   

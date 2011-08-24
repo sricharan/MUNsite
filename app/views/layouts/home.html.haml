@@ -42,10 +42,10 @@
               %li 
                 = link_to "Conference Policies", "#"
           %li 
-            = link_to "Registrations", registration_content_path , :remote => true
+            = link_to "Registrations"
             %ul.subnav
               %li 
-                = link_to "Delegates", "#"
+                = link_to "Delegates", delegate_registrations_path, :remote => true 
               %li 
                 = link_to "IP", "#"
           %li 

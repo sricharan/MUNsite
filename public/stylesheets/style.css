@@ -235,6 +235,7 @@ hr { display: none; }
 #content {
 	float: left;
 	width: 600px;
+        font-size: 14px;
 }
 
 /* Post */

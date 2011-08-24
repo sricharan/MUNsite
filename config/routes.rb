@@ -6,6 +6,9 @@ MUNsite::Application.routes.draw do
   match "/home/home_content" => "home#home_content", :as => "home_content"
   match "/home/registration_content" => "home#registration_content", :as => "registration_content"
   match "/home/mun_conference_content" => "home#mun_conference_content", :as => "mun_conference_content"
+  match "/home/delegate_registrations" => "home#delegate_registrations", :as => "delegate_registrations"
+  match "/home/delegates" => "home#delegates", :as => "delegates"
+  match "/home/ip_registrations" => "home#ip_registrations", :as => "ip_registrations"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
