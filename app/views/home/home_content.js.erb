@@ -1,4 +1,5 @@
 $('#content').hide();
 $('#content').html("<%=(escape_javascript(render "home_content"))%>");
 $('#content').slideDown(1000);
+$(document).scrollTop(200);
 
