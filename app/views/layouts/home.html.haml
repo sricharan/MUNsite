@@ -34,7 +34,13 @@
                     %li
                       = link_to raw("<span>Secreteriat</span>") , "#"
                 %b
-                  = link_to "Meet The Team" , "#", :class => "has_submenu"
+                  = link_to "Meet The Team" , "#", :class => "has_submenu", :id => "meet_the_team"
+                %div.submenu{:id => "meet_the_team-sub", :style => "display:none;"}
+                  %ul{:style => "list-style-type:none;"} 
+                    %li
+                      = link_to raw("<span>Organising Team</span>") , "#"
+                    %li
+                      = link_to raw("<span>Web Team</span>") , "#"
               %div.pic
                 %img{:alt => "", :height => "335" , :src => "/images/img16.jpg", :width => "1160"}
               %div.pic
