@@ -257,14 +257,14 @@ hr { display: none; }
 .post .title {
 	padding: 4px 20px 0px 20px;
 	height: 44px;
-	background: #EBE8E8;
+	background: #FFFFFF;
 }
 
 .post .title a {
 	text-decoration: none;
 	text-transform: capitalize;
 	font-size: 30px;
-	color: black;
+	color: #2ca2fd;
 }
 
 .post .date {
