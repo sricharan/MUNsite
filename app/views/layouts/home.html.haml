@@ -9,14 +9,12 @@
     %title
       = "IIT KGP MUN" 
     = stylesheet_link_tag  "style", "navigation_bar", "slideshow"
-    = javascript_include_tag "jquery", "application","rails"
+    = javascript_include_tag "jquery", "application","rails", "navigation"
     = csrf_meta_tag
 
 
   %body
     #logo
-      %h1 
-        = link_to "IIT KGP MUN"
     
     #slideshow
       #autochange
@@ -24,13 +22,19 @@
         #col2
           %div.slides
             %div.pics
-              #newmenu
+              %div.newmenu
                 %b
-                  = link_to "Home" , home_content_path , :remote => true
+                  = link_to "Home" , home_content_path , :remote => true, :class => "has_submenu"
+                %b 
+                  = link_to "About" ,"#", :class => "has_submenu", :id => "about"
+                %div.submenu{:id => "about-sub", :style => "display:none;"}
+                  %ul{:style => "list-style-type:none;"} 
+                    %li
+                      = link_to raw("<span>MUN Conference</span>") , "#"
+                    %li
+                      = link_to raw("<span>Secreteriat</span>") , "#"
                 %b
-                  = link_to "About" , "#"
-                %b
-                  = link_to "Meet The Team" , "#"
+                  = link_to "Meet The Team" , "#", :class => "has_submenu"
               %div.pic
                 %img{:alt => "", :height => "335" , :src => "/images/img16.jpg", :width => "1160"}
               %div.pic
