@@ -1,0 +1,24 @@
+.pic {
+ margin: 0 auto;
+ width:1160px;
+ z-index:-1;
+ }
+
+.pics {
+
+  width: 1160px;
+  margin: 0 auto; }
+ 
+#slideshow {
+  height:335px;
+  z-index: 0; }
+
+.slides {
+  z-index: 1; }
+
+#autochange {
+ z-index: 1; }
+ 
+#col2 {
+
+z-index:1; }   

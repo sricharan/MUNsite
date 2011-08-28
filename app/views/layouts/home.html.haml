@@ -8,8 +8,8 @@
     %meta{:content => "springfest", :property => "og:site_name"}/
     %title
       = "IIT KGP MUN" 
-    = stylesheet_link_tag "slidertron", "style", "navigation_bar"
-    = javascript_include_tag "jquery", "application","rails", "jquery.slidertron-0.1.js"
+    = stylesheet_link_tag  "style", "navigation_bar", "slideshow"
+    = javascript_include_tag "jquery", "application","rails"
     = csrf_meta_tag
 
 
@@ -17,73 +17,27 @@
     #logo
       %h1 
         = link_to "IIT KGP MUN"
-    #header
-      #menu
-        %ul.topnav
-          %li
-            = link_to "Home",home_content_path ,:id => "abcd", :class => 'first', :remote => true
-          %li   
-            = link_to "About", "#"
-            %ul.subnav
-              %li 
-                = link_to "MUN Conference", mun_conference_content_path, :remote => true 
-              %li 
-                = link_to "Secreteriat", "#"
-              %li 
-                = link_to "Executive Board", "#"
-          %li 
-            = link_to "Preparation" , "#"
-            
-            %ul.subnav
-              %li 
-                = link_to "Study Guides", "#"
-              %li 
-                = link_to "Procedure", "#"
-              %li 
-                = link_to "Conference Policies", "#"
-          %li 
-            = link_to "Registrations"
-            %ul.subnav
-              %li 
-                = link_to "Delegates", delegate_registrations_path, :remote => true 
-              %li 
-                = link_to "IP", "#"
-          %li 
-            = link_to "Committees", registration_content_path , :remote => true
-         
-          %li 
-            = link_to "Travel Planning", registration_content_path , :remote => true
-          %li 
-            = link_to "Logistics", registration_content_path , :remote => true
-            %ul.subnav
-              %li 
-                = link_to "Conference Fees", "#"
-              %li 
-                = link_to "Dates", "#"
-              %li 
-                = link_to "Accomodation", "#"
-              %li 
-                = link_to "Reimbursement Policy", "#"
-              %li 
-                = link_to "FAQs", "#"
-          %li 
-            = link_to "Meet the Team", registration_content_path , :remote => true
     
     #slideshow
-      #foobar
+      #autochange
         #col1
-          = link_to "", "#",:class => 'previous'
         #col2
-          %div.viewer
-            %div.reel
-              %div.slide
-                %img{:alt => "", :height => "335" , :src => "/images/img12.jpg", :width => "726"}
-              %div.slide
-                %img{:alt => "", :height => "335" , :src => "/images/img04.jpg", :width => "726"}
-              %div.slide
-                %img{:alt => "", :height => "335" , :src => "/images/img04.jpg", :width => "726"}
+          %div.slides
+            %div.pics
+              #newmenu
+                %b
+                  = link_to "Home" , home_content_path , :remote => true
+                %b
+                  = link_to "About" , "#"
+                %b
+                  = link_to "Meet The Team" , "#"
+              %div.pic
+                %img{:alt => "", :height => "335" , :src => "/images/img15.JPG", :width => "1160"}
+              %div.pic
+                %img{:alt => "", :height => "335" , :src => "/images/img04.jpg", :width => "1160",:style => "display:none;"}
+              %div.pic
+                %img{:alt => "", :height => "335" , :src => "/images/img04.jpg", :width => "1160", :style => "display:none;"}
         #col3
-          = link_to "", "#", :class => 'next'
     .clr
     #page
       #page-bgtop
@@ -100,36 +54,6 @@
         .clr
       .clr
     .clr
-    #footer
     .clr
 :javascript
-  $('#foobar').slidertron({							viewerSelector:			'.viewer',							reelSelector:			'.viewer .reel',							slidesSelector:			'.viewer .reel .slide',							navPreviousSelector:	'.previous',							navNextSelector:		'.next',							navFirstSelector:		'.first',							navLastSelector:		'.last'						});					
-
-  $('#abcd').mouseover( function() { $('#home_list').slideDown(); $(this).mouseout(function() { $('#home_list').slideUp();});});
-  $(document).scrollTop(0);
-
-
-
-:javascript
-
-  $(document).ready(function(){
-
-    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
-
-    $("ul.topnav li span").click(function() { //When trigger is clicked...
-
-      $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
-
-      $(this).parent().hover(function() {
-        }, function(){
-          $(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
-        });
-
-        }).hover(function() {
-          $(this).addClass("subhover"); //On hover over, add class "subhover"
-        }, function(){	//On Hover Out
-          $(this).removeClass("subhover"); //On hover out, remove class "subhover"
-    });
-
-  });
 

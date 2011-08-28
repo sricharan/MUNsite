@@ -8,10 +8,11 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0px;
 	padding: 0;
-	background: #4C9BCD url(/images/img01.jpg) repeat-x left top;
+	background: #E8E5E5;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #919191;
+        z-index:1;
 }
 
 h1, h2, h3 {
@@ -79,17 +80,18 @@ hr { display: none; }
 /* Header */
 
 #header {
-	width: 940px;
+	width: 1160px;
 	height: 68px;
 	margin: 0 auto;
 	background: url(/images/img02.jpg) no-repeat left top;
+        z-index:2;
 }
 
 /* Menu */
 
 #menu {
 	float: left;
-	width: 500px;
+	width: 1100px;
 	height: 68px;
 }
 
@@ -179,10 +181,10 @@ hr { display: none; }
 /* Page */
 
 #page {
-	width: 880px;
+	width: 1100px;
 	margin: 0px auto;
 	padding: 40px 30px 0px 30px;
-	background: #222222;
+	background: white;
 }
 
 #page-bgtop {
@@ -192,11 +194,13 @@ hr { display: none; }
 /** LOGO */
 
 #logo {
-	width: 920px;
-	height: 45px;
+	width: 1140px;
+	height: 150px;
 	margin: 0 auto;
+        margin-top : 40px;
 	padding-top: 5px;
 	padding-left: 20px;
+        background: white;
 }
 
 #logo h1, #logo p {
@@ -205,7 +209,8 @@ hr { display: none; }
 	line-height: normal;
 	text-transform: none;
 	font-weight: normal;
-	color: #FFFFFF;
+	color: #000000;
+        text-align:right;
 }
 
 #logo p {
@@ -219,11 +224,13 @@ hr { display: none; }
 #logo h1 {
 	letter-spacing: -1px;
 	font-size: 30px;
+        text-align: right;
 }
 
 #logo a {
 	text-decoration: none;
-	color: #FFFFFF;
+	color: #000000;
+        text-align: center;
 }
 
 #banner {
@@ -234,8 +241,8 @@ hr { display: none; }
 
 #content {
 	float: left;
-	width: 600px;
-        font-size: 14px;
+	width: 800px;
+        font-size: 13px;
 }
 
 /* Post */
@@ -243,21 +250,21 @@ hr { display: none; }
 .post {
 	margin-bottom: 30px;
 	padding-bottom: 20px;
-	border-bottom: 1px dashed #1D1D1D;
-	background: #1E1E1E;
+	border-bottom: 1px solid #EDEDED;
+	background: #FFFFFF;
 }
 
 .post .title {
 	padding: 4px 20px 0px 20px;
 	height: 44px;
-	background: #161616;
+	background: #EBE8E8;
 }
 
 .post .title a {
 	text-decoration: none;
 	text-transform: capitalize;
 	font-size: 30px;
-	color: #4999CB;
+	color: black;
 }
 
 .post .date {
@@ -269,7 +276,7 @@ hr { display: none; }
 
 .post .meta {
 	margin-left: 2px;
-	padding: 10px 30px 0px 10px;
+	padding: 0px 0px 0px 0px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 10px;
@@ -290,6 +297,9 @@ hr { display: none; }
 	padding: 30px 20px 20px 20px;
 }
 
+.post .entry p {
+        color: black;
+}
 .post .links {
 	display: block;
 	width: 120px;
@@ -340,7 +350,7 @@ hr { display: none; }
 #sidebar li {
 	margin-bottom: 30px;
 	padding: 0 0 10px 0px;
-	background: #1E1E1E;
+	background: #FFFFFF;
 }
 
 #sidebar li ul {
@@ -350,7 +360,8 @@ hr { display: none; }
 #sidebar li li {
 	margin: 0px;
 	padding: 8px 0px 8px 0px;
-	border-bottom: 1px solid #222222;
+	border-bottom: 1px solid #EDEDED;
+        color: #000000;
 }
 
 #sidebar li li a {
@@ -359,7 +370,7 @@ hr { display: none; }
 }
 
 #sidebar li li a:hover {
-	color: #666666;
+	color: #000000;
 }
 
 #sidebar p {
@@ -371,11 +382,11 @@ hr { display: none; }
 	height: 30px;
 	margin: 0 0 10px 0px;
 	padding: 6px 20px 2px 20px;
-	background: #161616;
+	background: #EDEDED;
 	text-transform: capitalize;
 	font-size: 18px;
 	font-weight: normal;
-	color: #4999CB;
+	color: #000000;
 }
 
 
@@ -387,7 +398,7 @@ hr { display: none; }
 	text-align: left;
 	text-decoration: none;
 	font-weight: bold;
-	color: #666666;
+	color: #000000;
 }
 
 /* Calendar */
@@ -471,4 +482,24 @@ hr { display: none; }
 
 .clr {clear:both;}
 
+#newmenu {
+  opacity: 0.9;
+  position: absolute;
+  background: url(/images/menu-bg.jpg) repeat-x ;
+  margin: 30px;
+  margin-top: 20px;
+  z-index:1000;
+  width:1100px;
+  height: 41px; 
+  padding: 13px 0px 10px 0px ;
+ }
 
+
+#newmenu  a {
+  color: #0E77C2;
+  text-decoration: none;
+  font-size: 13px; 
+  border-right: 1px solid #EFEFEF; 
+  margin: 10px 10px 10px 10px;
+  padding: 10px 13px 10px 0px;  
+  margin-top: 10px;}
