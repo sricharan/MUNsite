@@ -1,8 +1,22 @@
-.pic {
+.rotator {
  margin: 0 auto;
  width:1160px;
  z-index:-1;
+ 
  }
+
+.rotator ul li{
+   list-style: none ;
+   position: absolute;
+ }
+
+.rotator ul {
+   padding: 0px ;
+ }
+
+.rotator ul li.show { 
+
+z-index: 500; } 
 
 .pics {
 
@@ -21,4 +35,6 @@
  
 #col2 {
 
-z-index:1; }   
+z-index:1; }  
+
+

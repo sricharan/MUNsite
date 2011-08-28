@@ -488,6 +488,7 @@ hr { display: none; }
   position: absolute;
   background: url(/images/menu-bg.jpg) repeat-x ;
   margin: 30px;
+  margin-left: 20px;
   margin-top: 20px;
   z-index:1000;
   width:1100px;
@@ -549,3 +550,5 @@ hr { display: none; }
 #meet_the_team-sub {
   left: 139px;
 }
+
+
