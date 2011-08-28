@@ -22,7 +22,7 @@ $(".rotator").hover( function() {
 
  theRotator();
  $('div.rotator').fadeIn(1000);
-
+ $('div.rotator ul li').fadeIn(1000);
 });
 
 function theRotator() {
