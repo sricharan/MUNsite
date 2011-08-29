@@ -547,8 +547,17 @@ hr { display: none; }
 }
 
 
-#meet_the_team-sub {
+#preparation-sub {
   left: 139px;
 }
 
+#meet_the_team-sub {
+  left: 672px;
+}
+#logistics-sub {
+  left: 586px;
+}
 
+#registrations-sub {
+  left: 242px;
+}

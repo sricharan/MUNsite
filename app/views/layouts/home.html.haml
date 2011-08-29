@@ -33,6 +33,40 @@
                       = link_to raw("<span>MUN Conference</span>") , "#"
                     %li
                       = link_to raw("<span>Secreteriat</span>") , "#"
+                %b 
+                  = link_to "Preparation" ,"#", :class => "has_submenu", :id => "preparation"
+                %div.submenu{:id => "preparation-sub", :style => "display:none;"}
+                  %ul{:style => "list-style-type:none;"} 
+                    %li
+                      = link_to raw("<span>Study Guides</span>") , "#"
+                    %li
+                      = link_to raw("<span>Parliamentary Procedure</span>") , "#"
+                    %li
+                      = link_to raw("<span>Conference Policies</span>") , "#"
+                %b 
+                  = link_to "Registrations" ,"#", :class => "has_submenu", :id => "registrations"
+                %div.submenu{:id => "registrations-sub", :style => "display:none;"}
+                  %ul{:style => "list-style-type:none;"} 
+                    %li
+                      = link_to raw("<span>Delegate</span>") , "#"
+                    %li
+                      = link_to raw("<span>International Press</span>") , "#"
+                %b 
+                  = link_to "Committees" ,"#", :class => "has_submenu", :id => "committees"
+                %b 
+                  = link_to "Travel Planning" ,"#", :class => "has_submenu", :id => "travel_planning"
+                %b 
+                  = link_to "Logistics" ,"#", :class => "has_submenu", :id => "logistics"
+                %div.submenu{:id => "logistics-sub", :style => "display:none;"}
+                  %ul{:style => "list-style-type:none;"} 
+                    %li
+                      = link_to raw("<span>Fees and Dates</span>") , "#"
+                    %li
+                      = link_to raw("<span>Accomodation</span>") , "#"
+                    %li
+                      = link_to raw("<span>Reimbursement Policy</span>") , "#"
+                    %li
+                      = link_to raw("<span>FAQs</span>") , "#"
                 %b
                   = link_to "Meet The Team" , "#", :class => "has_submenu", :id => "meet_the_team"
                 %div.submenu{:id => "meet_the_team-sub", :style => "display:none;"}
