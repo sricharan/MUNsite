@@ -9,7 +9,7 @@
     %title
       = "IIT KGP MUN" 
     = stylesheet_link_tag  "style", "navigation_bar", "slideshow"
-    = javascript_include_tag "jquery", "application","rails", "navigation"
+    = javascript_include_tag "jquery", "application","rails", "navigation", "jquery.countdown.pack"
     = csrf_meta_tag
 
 
@@ -82,7 +82,7 @@
                     %img{:alt => "", :height => "335" , :src => "/images/img16.jpg", :width => "1160" }
                   %li
                     %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/img15.JPG", :width => "1160"}
+                    %img{:alt => "", :height => "335" , :src => "/images/img30.jpg", :width => "1160"}
                   %li
                     %a{:href => "javascript:void(0)"}
                     %img{:alt => "", :height => "335" , :src => "/images/ortona.jpg", :width => "1160"}
@@ -93,6 +93,25 @@
         #content
           = render :partial => "home_content"
         #sidebar
+          %h3   Countdown to IITKGPMUN   
+          #countdown 
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %ul
+            %li 
+              %h2 Announcements 
+              %ul{:style => "margin:10px;"}
+                %li 
+                  Executive board applications are up.    
+                  = link_to "Click Here!" , "#"
+                %li
+                  Executive board applications will be open soon. Please keep checking.    
+                %li 
+                  Executive board applications will be open soon. Please keep checking.    
           %ul
             %li 
               %h2 Links
