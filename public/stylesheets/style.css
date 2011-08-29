@@ -367,6 +367,7 @@ hr { display: none; }
 	padding: 8px 0px 8px 0px;
 	border-bottom: 1px solid #EDEDED;
         color: #000000;
+        line-height: 150%;
 }
 
 #sidebar li li a {
