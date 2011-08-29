@@ -671,4 +671,9 @@ hr {  /* this creates the overline you see on top of the timer */
 	left:155px;
 }
 
+.fblike {
+  position: absolute;
+  top: 12px;
+  left: 28px;
 
+}

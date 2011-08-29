@@ -75,6 +75,9 @@
                       = link_to raw("<span>Organising Team</span>") , "#"
                     %li
                       = link_to raw("<span>Web Team</span>") , "#"
+                .fblike
+                  %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+                  %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
               %div.rotator
                 %ul
                   %li.show
