@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ebmun_1: MyString
+  ebmun_2: MyString
+  ebmun_3: MyString
+  ebmun_4: MyString
+  ebmun_5: MyString
+
+two:
+  ebmun_1: MyString
+  ebmun_2: MyString
+  ebmun_3: MyString
+  ebmun_4: MyString
+  ebmun_5: MyString

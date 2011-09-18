@@ -1,27 +1,24 @@
 class HomeController < ApplicationController
 
-  def index
-    
-  end
 
-  def home_content
-  end
 
   def delegate_registrations
     @delegate = Delegate.new
     @user = User.new
   end
  
-  def delegates
+  def eb_registrations
+    @executive_board = ExecutiveBoard.new
+    @user = User.new
+  end
+  
+  def executive_board
+    @executive_board = ExecutiveBoard.new( params[:executive_board] )
+    @executive_board.save
+    redirect_to home_content_path
   end 
   
-  def ip_registrations
-    @international_press = InternationalPress.new
-  end
   
-  def mun_conference_content
-  
-  end
   
   
 end

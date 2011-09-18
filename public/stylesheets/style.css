@@ -10,8 +10,8 @@ body {
 	padding: 0;
 	background: #E8E5E5;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #919191;
+	font-size: 10px;
+	color: #000000;
         z-index:1;
 }
 
@@ -21,6 +21,7 @@ h1, h2  {
 	font-weight: normal;
 	color: #549900;
 }
+
 
 h1 { font-size: 44px; }
 
@@ -247,7 +248,8 @@ hr { display: none; }
 #content {
 	float: left;
 	width: 800px;
-        font-size: 13px;
+        font-size: 15px;
+ 
 }
 
 /* Post */
@@ -285,7 +287,7 @@ hr { display: none; }
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 10px;
-	color: #66665E;
+	color: #000000;
 }
 
 .post .meta span {
@@ -677,3 +679,20 @@ hr {  /* this creates the overline you see on top of the timer */
   left: 28px;
 
 }
+
+#experience table tr {
+  padding: 10px auto ; 
+}
+#experience table tr td {
+background: #EDEDED;
+padding: 20px; }
+#experience table tr th { 
+padding: 20px ;
+color: #000000;
+background : #D8D8D8; }
+
+
+#new_eb td 
+{
+ padding :10px;}
+ 

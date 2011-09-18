@@ -24,7 +24,7 @@
             %div.pics
               %div.newmenu
                 %b
-                  = link_to "Home" , home_content_path , :remote => true, :class => "has_submenu"
+                  = link_to "Home" , home_content_path , :class => "has_submenu"
                 %b 
                   = link_to "About" ,"#", :class => "has_submenu", :id => "about"
                 %div.submenu{:id => "about-sub", :style => "display:none;"}
@@ -51,6 +51,8 @@
                       = link_to raw("<span>Delegate</span>") , "#"
                     %li
                       = link_to raw("<span>International Press</span>") , "#"
+                    %li
+                      = link_to raw("<span>Executive Board</span>") , eb_registrations_path
                 %b 
                   = link_to "Committees" ,"#", :class => "has_submenu", :id => "committees"
                 %b 
@@ -94,7 +96,7 @@
     #page
       #page-bgtop
         #content
-          = render :partial => "home_content"
+          = yield
         #sidebar
           %h3   Countdown to IITKGPMUN   
           #countdown 

@@ -21,6 +21,8 @@ $('#countdown').countdown({until:$.countdown.UTCDate(+6, 2012, 1 - 1, 21), forma
 
 $(document).ready( function(){
 
+
+window.scrollTo(0,500);
 $('.has_submenu').hover( function() {
 
   $('.submenu').hide();

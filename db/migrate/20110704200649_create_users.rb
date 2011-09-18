@@ -2,11 +2,12 @@ class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
       t.string :full_name
-      t.string :email
+      t.string :gender
+      t.string :course
+      t.string :year
+      t.string :place_of_residence
       t.string :mobile
-      t.string :institution
-      t.string :country
-      t.string :city
+      t.string :email
       t.string :type
       t.string :resource_type
       t.integer :resource_id

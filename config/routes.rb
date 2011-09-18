@@ -2,13 +2,15 @@ MUNsite::Application.routes.draw do
   
   resources :user
   
-  match "/home/index", :to => "home#index", :as => "home_index"
-  match "/home/home_content" => "home#home_content", :as => "home_content"
-  match "/home/registration_content" => "home#registration_content", :as => "registration_content"
-  match "/home/mun_conference_content" => "home#mun_conference_content", :as => "mun_conference_content"
-  match "/home/delegate_registrations" => "home#delegate_registrations", :as => "delegate_registrations"
-  match "/home/delegates" => "home#delegates", :as => "delegates"
-  match "/home/ip_registrations" => "home#ip_registrations", :as => "ip_registrations"
+  match "/index", :to => "home#index", :as => "home_index"
+  match "/home" => "home#home_content", :as => "home_content"
+  match "/registration_content" => "home#registration_content", :as => "registration_content"
+  match "/mun_conference_content" => "home#mun_conference_content", :as => "mun_conference_content"
+  match "/delegate_registrations" => "home#delegate_registrations", :as => "delegate_registrations"
+  match "/delegates" => "home#delegates", :as => "delegates"
+  match "/ip_registrations" => "home#ip_registrations", :as => "ip_registrations"
+  match "/executive_board_registrations" => "home#eb_registrations", :as => "eb_registrations"
+  match "/executive_board" => "home#executive_board", :as => "executive_boards"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
