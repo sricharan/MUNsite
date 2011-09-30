@@ -9,13 +9,13 @@ class HomeController < ApplicationController
  
   def eb_registrations
     @executive_board = ExecutiveBoard.new
-    @user = User.new
+    @executive_board.build_user 
   end
   
   def executive_board
     @executive_board = ExecutiveBoard.new( params[:executive_board] )
     @executive_board.save
-    redirect_to home_content_path
+    redirect_to home_index_path
   end 
   
   

@@ -3,7 +3,7 @@
     = link_to  "Executive Application Form" , "#"
 
 - form_for @executive_board do |executive_board|
-  = executive_board.fields_for @user do |user|
+  = executive_board.fields_for :user do |user|
     %table{:id => "new_eb"}
       %tr
         %td
