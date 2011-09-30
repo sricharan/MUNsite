@@ -1,0 +1,185 @@
+%div.post
+  %h2.title
+    = link_to  "Executive Application Form" , "#"
+
+- form_for @executive_board do |executive_board|
+  = executive_board.fields_for :user do |user|
+    %table{:id => "new_eb"}
+      %tr
+        %td
+          %b Name
+        %td
+          = user.text_field :full_name, :size => 25
+      
+      %tr
+        %td
+          %b Gender 
+        %td
+          = user.text_field :gender, :size => 25 
+      %tr
+        %td
+          %b Course
+        %td
+          = user.text_field :course, :size => 25 
+      %tr
+        %td
+          %b Year
+        %td
+          = user.text_field :year, :size => 25 
+      %tr
+        %td
+          %b Place of Residence
+        %td
+          = user.text_field :place_of_residence, :size => 25 
+      %tr
+        %td
+          %b Mobile Number
+        %td
+          = user.text_field :mobile, :size => 25 
+      %tr
+        %td
+          %b Email
+        %td
+          = user.text_field :email, :size => 25 
+
+  %br
+  %br
+  %b{:style=> "margin-left: 10px;"}
+    Previous Executive Board Experience
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:100px;"}
+      %tr
+        %th Name of MUN
+        %th Year 
+        %th Council
+        %th Position
+      %tr 
+        %td 
+          = executive_board.text_field :eb_mun_1, :size => 10 
+        %td 
+          = executive_board.text_field :eb_year_1, :size => 10 
+        %td 
+          = executive_board.text_field :eb_council_1, :size => 10 
+        %td 
+          = executive_board.text_field :eb_position_1, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :eb_mun_2, :size => 10 
+        %td 
+          = executive_board.text_field :eb_year_2, :size => 10 
+        %td 
+          = executive_board.text_field :eb_council_2, :size => 10 
+        %td 
+          = executive_board.text_field :eb_position_2, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :eb_mun_3, :size => 10 
+        %td 
+          = executive_board.text_field :eb_year_3, :size => 10 
+        %td 
+          = executive_board.text_field :eb_council_3, :size => 10 
+        %td 
+          = executive_board.text_field :eb_position_3, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :eb_mun_4, :size => 10 
+        %td 
+          = executive_board.text_field :eb_year_4, :size => 10 
+        %td 
+          = executive_board.text_field :eb_council_4, :size => 10 
+        %td 
+          = executive_board.text_field :eb_position_4, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :eb_mun_5, :size => 10 
+        %td 
+          = executive_board.text_field :eb_year_5, :size => 10 
+        %td 
+          = executive_board.text_field :eb_council_5, :size => 10 
+        %td 
+          = executive_board.text_field :eb_position_5, :size => 10 
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    Please Continue Writing Your Executive Board Experience Here:
+  %br
+  %br
+  = executive_board.text_area :eb_experience, :style => "height:100px;width:600px;margin-left:100px"
+  %br
+  %br
+  %br
+  %br
+  %b{:style=>"margin-left:10px;"}
+    Previous Delegate Experience
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:100px;"}
+      %tr
+        %th Name of MUN
+        %th Council
+        %th Country 
+        %th Awards (if any)
+      %tr 
+        %td 
+          = executive_board.text_field :d_mun_1, :size => 10 
+        %td 
+          = executive_board.text_field :d_council_1, :size => 10 
+        %td 
+          = executive_board.text_field :d_country_1, :size => 10 
+        %td 
+          = executive_board.text_field :d_awards_1, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :d_mun_2, :size => 10 
+        %td 
+          = executive_board.text_field :d_council_2, :size => 10 
+        %td 
+          = executive_board.text_field :d_country_2, :size => 10 
+        %td 
+          = executive_board.text_field :d_awards_2, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :d_mun_3, :size => 10 
+        %td 
+          = executive_board.text_field :d_council_3, :size => 10 
+        %td 
+          = executive_board.text_field :d_country_3, :size => 10 
+        %td 
+          = executive_board.text_field :d_awards_3, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :d_mun_4, :size => 10 
+        %td 
+          = executive_board.text_field :d_council_4, :size => 10 
+        %td 
+          = executive_board.text_field :d_country_4, :size => 10 
+        %td 
+          = executive_board.text_field :d_awards_4, :size => 10 
+      %tr 
+        %td 
+          = executive_board.text_field :d_mun_5, :size => 10 
+        %td 
+          = executive_board.text_field :d_council_5, :size => 10 
+        %td 
+          = executive_board.text_field :d_country_5, :size => 10 
+        %td 
+          = executive_board.text_field :d_awards_5, :size => 10
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    Please Continue Writing Your MUN Experience Here:
+  %br
+  %br
+  = executive_board.text_area :mun_experience, :style => "height:100px;width:600px;margin-left:100px"
+  %br 
+  %br 
+  %br 
+  %br 
+  = executive_board.submit
+  %br
+  %br
+
+   
