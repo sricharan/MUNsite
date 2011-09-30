@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-
+  before_filter :authenticate_user!, :only => [:eb_list]
 
 
   def delegate_registrations
@@ -20,7 +20,9 @@ class HomeController < ApplicationController
     redirect_to home_index_path
   end 
   
-  
+  def eb_list
+    @executive_board = ExecutiveBoard.all
+  end 
   
   
 end

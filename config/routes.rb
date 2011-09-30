@@ -1,5 +1,7 @@
 MUNsite::Application.routes.draw do
   
+  devise_for :admins
+
   resources :user
   
   match "/index", :to => "home#index", :as => "home_index"
