@@ -5,4 +5,3 @@ require File.expand_path('../application', __FILE__)
 MUNsite::Application.initialize!
 
 
-config.action_mailer.delivery_method = :smtp
