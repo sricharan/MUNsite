@@ -14,7 +14,9 @@ class HomeController < ApplicationController
   
   def executive_board
     @executive_board = ExecutiveBoard.new( params[:executive_board] )
-    @executive_board.save
+    if @executive_board.save
+      UserMailer.confirmation_email(@executive_board.user).deliver
+    end
     redirect_to home_index_path
   end 
   
