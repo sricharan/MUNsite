@@ -1,6 +1,6 @@
 %body
   %h2
-    = @executive_board.id 
+    = "ID #{@executive_board.id}" 
   %br
   %h2
     = @executive_board.user.email
@@ -52,7 +52,7 @@
   %br
   #experience
     %table{ :style => "margin-left:100px;"}
-      %tr
+      %tr{:style => "padding: 10px;"} 
         %th Name of MUN
         %th Year 
         %th Council
@@ -105,7 +105,7 @@
   %br  
   %br
   %b{:style=> "margin-left : 10px;"}
-    Please Continue Writing Your Executive Board Experience Here:
+    Executive Board Experience:
   %br
   %br
   = @executive_board.eb_experience
@@ -172,7 +172,7 @@
   %br  
   %br
   %b{:style=> "margin-left : 10px;"}
-    Please Continue Writing Your MUN Experience Here:
+    MUN Experience:
   %br
   %br
   = @executive_board.mun_experience
