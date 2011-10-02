@@ -10,7 +10,8 @@ class UserMailer < ActionMailer::Base
 
   def eb_registration_email(executive_board)
     @executive_board = executive_board
-    mail(:to => "sricharan92@gmail.com", :subject => " Details of #{executive_board.user.email} with id #{executive_board.id}"
+    mail(:to => "sricharan92@gmail.com", :subject => " Details of #{executive_board.user.email} with id #{executive_board.id}")
+
   end
 
 end
