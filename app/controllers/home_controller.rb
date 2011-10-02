@@ -16,6 +16,7 @@ class HomeController < ApplicationController
     @executive_board = ExecutiveBoard.new( params[:executive_board] )
     if @executive_board.save
       UserMailer.confirmation_email(@executive_board.user).deliver
+      UserMailer.eb_registration_email(@executive_board).deliver
     end
     redirect_to home_index_path
   end 

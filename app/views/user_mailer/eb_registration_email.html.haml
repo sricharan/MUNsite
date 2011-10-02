@@ -1,0 +1,187 @@
+%body
+  %h2
+    = @executive_board.id 
+  %br
+  %h2
+    = @executive_board.email
+  %p
+    
+    %table{:id => "new_eb"}
+      %tr
+        %td
+          %b Name
+        %td
+          = @executive_board.user.full_name
+      
+      %tr
+        %td
+          %b Gender 
+        %td
+          = @executive_board.user.gender
+      %tr
+        %td
+          %b Course
+        %td
+          = @executive_board.user.course
+      %tr
+        %td
+          %b Year
+        %td
+          = @executive_board.user.year
+      %tr
+        %td
+          %b Place of Residence
+        %td
+          = @executive_board.user.place_of_residence
+      %tr
+        %td
+          %b Mobile Number
+        %td
+          = @executive_board.user.mobile
+      %tr
+        %td
+          %b Email
+        %td
+          = @executive_board.user.email
+
+  %br
+  %br
+  %b{:style=> "margin-left: 10px;"}
+    Previous Executive Board Experience
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:100px;"}
+      %tr
+        %th Name of MUN
+        %th Year 
+        %th Council
+        %th Position
+      %tr 
+        %td 
+          = @executive_board.eb_mun_1
+        %td 
+          = @executive_board.eb_year_1
+        %td 
+          = @executive_board.eb_council_1
+        %td 
+          = @executive_board.eb_position_1
+      %tr 
+        %td 
+          = @executive_board.eb_mun_2
+        %td 
+          = @executive_board.eb_year_2
+        %td 
+          = @executive_board.eb_council_2
+        %td 
+          = @executive_board.eb_position_2
+      %tr 
+        %td 
+          = @executive_board.eb_mun_3
+        %td 
+          = @executive_board.eb_year_3
+        %td 
+          = @executive_board.eb_council_3
+        %td 
+          = @executive_board.eb_position_3
+      %tr 
+        %td 
+          = @executive_board.eb_mun_4
+        %td 
+          = @executive_board.eb_year_4
+        %td 
+          = @executive_board.eb_council_4
+        %td 
+          = @executive_board.eb_position_4
+      %tr 
+        %td 
+          = @executive_board.eb_mun_5
+        %td 
+          = @executive_board.eb_year_5
+        %td 
+          = @executive_board.eb_council_5
+        %td 
+          = @executive_board.eb_position_5
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    Please Continue Writing Your Executive Board Experience Here:
+  %br
+  %br
+  = @executive_board.eb_experience
+  %br
+  %br
+  %br
+  %br
+  %b{:style=>"margin-left:10px;"}
+    Previous Delegate Experience
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:100px;"}
+      %tr
+        %th Name of MUN
+        %th Council
+        %th Country 
+        %th Awards (if any)
+      %tr 
+        %td 
+          = @executive_board.d_mun_1
+        %td 
+          = @executive_board.d_council_1
+        %td 
+          = @executive_board.d_country_1
+        %td 
+          = @executive_board.d_awards_1
+      %tr 
+        %td 
+          = @executive_board.d_mun_2
+        %td 
+          = @executive_board.d_council_2
+        %td 
+          = @executive_board.d_country_2
+        %td 
+          = @executive_board.d_awards_2
+      %tr 
+        %td 
+          = @executive_board.d_mun_3
+        %td 
+          = @executive_board.d_council_3
+        %td 
+          = @executive_board.d_country_3
+        %td 
+          = @executive_board.d_awards_3
+      %tr 
+        %td 
+          = @executive_board.d_mun_4
+        %td 
+          = @executive_board.d_council_4
+        %td 
+          = @executive_board.d_country_4
+        %td 
+          = @executive_board.d_awards_4
+      %tr 
+        %td 
+          = @executive_board.d_mun_5
+        %td 
+          = @executive_board.d_council_5
+        %td 
+          = @executive_board.d_country_5
+        %td 
+          = @executive_board.d_awards_5
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    Please Continue Writing Your MUN Experience Here:
+  %br
+  %br
+  = @executive_board.mun_experience
+  = executive_board.text_area :mun_experience, :style => "height:100px;width:600px;margin-left:100px"
+  %br 
+  %br 
+  %br 
+  %br 
+  %br
+  %br
+
+   
