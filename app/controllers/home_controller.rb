@@ -4,6 +4,27 @@ class HomeController < ApplicationController
   def about
   end
 
+  def eb
+  end
+
+  def ip
+  end
+
+  def schedule
+  end
+
+  def key_dates
+  end
+
+  def conference_fees
+  end
+
+  def agenda
+  end
+
+  def country_matrix
+  end
+
   def delegate_registrations
     @delegate = Delegate.new
     @user = User.new

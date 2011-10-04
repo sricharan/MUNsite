@@ -8,6 +8,13 @@ MUNsite::Application.routes.draw do
   match "/about", :to => "home#about" ,:as => "home_about"
   match "/executive_board_registrations" => "home#eb_registrations", :as => "eb_registrations"
   match "/executive_board" => "home#executive_board", :as => "executive_boards"
+  match "/eb" => "home#eb", :as => "home_eb"
+  match "/ip" => "home#ip", :as => "home_ip"
+  match "/schedule" => "home#schedule", :as => "home_schedule"
+  match "/key_dates" => "home#key_dates", :as => "home_key_dates"
+  match "/conference_fees" => "home#conference_fees", :as => "home_conference_fees"
+  match "/agenda" => "home#agenda", :as => "home_agenda"
+  match "/country_matrix" => "home#country_matrix", :as => "home_country_matrix"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

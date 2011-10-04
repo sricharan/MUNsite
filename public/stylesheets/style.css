@@ -554,8 +554,13 @@ hr { display: none; }
   left: 72px;
 }
 
+#committees-sub {
+  left:352px; }
 
 #preparation-sub {
+  left:455px; }
+
+#conference-sub {
   left: 139px;
 }
 
