@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   before_filter :authenticate_user!, :only => [:eb_list]
 
+  def about
+  end
 
   def delegate_registrations
     @delegate = Delegate.new

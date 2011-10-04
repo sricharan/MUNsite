@@ -5,6 +5,7 @@ MUNsite::Application.routes.draw do
   resources :user
   
   match "/index", :to => "home#index", :as => "home_index"
+  match "/about", :to => "home#about" ,:as => "home_about"
   match "/executive_board_registrations" => "home#eb_registrations", :as => "eb_registrations"
   match "/executive_board" => "home#executive_board", :as => "executive_boards"
   # The priority is based upon order of creation:

@@ -26,13 +26,7 @@
                 %b
                   = link_to "Home" , home_index_path , :class => "has_submenu"
                 %b 
-                  = link_to "About" ,"#", :class => "has_submenu", :id => "about"
-                %div.submenu{:id => "about-sub", :style => "display:none;"}
-                  %ul{:style => "list-style-type:none;"} 
-                    %li
-                      = link_to raw("<span>MUN Conference</span>") , "#"
-                    %li
-                      = link_to raw("<span>Secreteriat</span>") , "#"
+                  = link_to "About" ,home_about_path , :class => "has_submenu", :id => "about"
                 %b 
                   = link_to "Preparation" ,"#", :class => "has_submenu", :id => "preparation"
                 %div.submenu{:id => "preparation-sub", :style => "display:none;"}
@@ -78,8 +72,8 @@
                     %li
                       = link_to raw("<span>Web Team</span>") , "#"
                 .fblike
-                  %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
-                  %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
+                  =#%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+                  = # %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
               %div.rotator
                 %ul
                   %li.show
