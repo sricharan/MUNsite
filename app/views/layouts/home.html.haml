@@ -77,6 +77,16 @@
                       = link_to raw("<span>Conference Rules</span>") , "#"
                 %b
                   = link_to "Meet The Team" , "#", :class => "has_submenu", :id => "meet_the_team"
+                %div.submenu{:id => "meet_the_team-sub", :style => "display:none;"}
+                  %ul{:style => "list-style-type:none;"} 
+                    %li
+                      = link_to raw("<span>Secretary General</span>") , home_secretary_general_path
+                    %li
+                      = link_to raw("<span>Director General</span>") , home_director_general_path
+                    %li
+                      = link_to raw("<span>Under Secretary General</span>") , home_under_secretary_general_path
+                    %li
+                      = link_to raw("<span>Directors</span>") ,  home_directors_path
                 .fblike
                   =#%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
                   = # %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
@@ -112,7 +122,7 @@
               %ul{:style => "margin:10px;"}
                 %li 
                   Executive board applications are up.    
-                  = link_to "Click Here!" , "#"
+                  = link_to "Click Here!" , eb_registrations_path
                 %li
                   Executive board applications will be open soon. Please keep checking.    
                 %li 

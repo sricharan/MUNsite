@@ -4,6 +4,18 @@ class HomeController < ApplicationController
   def about
   end
 
+  def secretary_general
+  end
+
+  def under_secretary_general
+  end
+
+  def directors
+  end
+
+  def director_general
+  end
+
   def eb
   end
 

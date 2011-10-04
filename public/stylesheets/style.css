@@ -565,7 +565,7 @@ hr { display: none; }
 }
 
 #meet_the_team-sub {
-  left: 672px;
+  left: 555px;
 }
 #logistics-sub {
   left: 586px;
@@ -700,4 +700,7 @@ background : #D8D8D8; }
 #new_eb td 
 {
  padding :10px;}
- 
+
+
+.picture {
+ float:left;} 

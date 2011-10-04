@@ -15,6 +15,10 @@ MUNsite::Application.routes.draw do
   match "/conference_fees" => "home#conference_fees", :as => "home_conference_fees"
   match "/agenda" => "home#agenda", :as => "home_agenda"
   match "/country_matrix" => "home#country_matrix", :as => "home_country_matrix"
+  match "/secretary_general" => "home#secretary_general", :as => "home_secretary_general"
+  match "/director_general" => "home#director_general", :as => "home_director_general"
+  match "/under_secretary_general" => "home#under_secretary_general", :as => "home_under_secretary_general"
+  match "/directors" => "home#directors", :as => "home_directors"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
