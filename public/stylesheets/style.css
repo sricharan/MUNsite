@@ -492,13 +492,13 @@ hr { display: none; }
 
 .newmenu {
   opacity: 1;
-  position: absolute;
+  position: relative;
   background: url(/images/menu-bg.jpg) repeat-x ;
-  margin-left: 52px;
+  margin: 0 auto;
   z-index:1000;
   width:1140px;
-  height: 41px; 
-  padding: 13px 10px 10px 10px ;
+  height: 30px; 
+  padding: 13px 10px 0px 10px ;
  }
 
 .newmenu ul {

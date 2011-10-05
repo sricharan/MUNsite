@@ -46,12 +46,28 @@ class HomeController < ApplicationController
   
   def executive_board
     @executive_board = ExecutiveBoard.new( params[:executive_board] )
-    if @executive_board.save
+    @eb = ExecutiveBoard.all
+    @existing_eb = nil
+    @eb.each do |eb|
+      if eb.user.email == @executive_board.user.email
+        @existing_eb = eb
+      end
+    end
+        
+    if @executive_board.save 
       UserMailer.confirmation_email(@executive_board.user).deliver
       UserMailer.eb_registration_email(@executive_board).deliver
       redirect_to home_index_path
     else
-      render :eb_registrations
+      if @existing_eb == nil
+        render :eb_registrations
+      else
+        if @executive_board.user.valid? 
+          @existing_eb.update_attributes(params[:executive_board])
+        else 
+          render :eb_registrations
+        end  
+      end
     end
   end 
   
