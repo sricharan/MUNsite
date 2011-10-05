@@ -494,7 +494,7 @@ hr { display: none; }
   opacity: 1;
   position: absolute;
   background: url(/images/menu-bg.jpg) repeat-x ;
-  margin-left: 52px;
+  margin-left: 51px;
   z-index:1000;
   width:1140px;
   height: 41px; 
