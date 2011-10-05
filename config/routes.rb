@@ -13,12 +13,12 @@ MUNsite::Application.routes.draw do
   match "/schedule" => "home#schedule", :as => "home_schedule"
   match "/key_dates" => "home#key_dates", :as => "home_key_dates"
   match "/conference_fees" => "home#conference_fees", :as => "home_conference_fees"
-  match "/agenda" => "home#agenda", :as => "home_agenda"
-  match "/country_matrix" => "home#country_matrix", :as => "home_country_matrix"
-  match "/secretary_general" => "home#secretary_general", :as => "home_secretary_general"
-  match "/director_general" => "home#director_general", :as => "home_director_general"
-  match "/under_secretary_general" => "home#under_secretary_general", :as => "home_under_secretary_general"
-  match "/directors" => "home#directors", :as => "home_directors"
+  match "/historic_ga" => "home#historic_ga", :as => "home_historic_ga"
+  match "/un_security_council" => "home#unsc", :as => "home_unsc"
+  match "/meet_the_team" => "home#meet_the_team", :as => "home_meet_the_team"
+  match "/awards" => "home#awards", :as => "home_awards"
+  match "/coming_soon" => "home#coming_soon", :as => "home_coming_soon"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

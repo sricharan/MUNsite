@@ -4,16 +4,13 @@ class HomeController < ApplicationController
   def about
   end
 
-  def secretary_general
+  def meet_the_team
   end
 
-  def under_secretary_general
+  def awards
   end
 
-  def directors
-  end
-
-  def director_general
+  def coming_soon
   end
 
   def eb
@@ -31,10 +28,10 @@ class HomeController < ApplicationController
   def conference_fees
   end
 
-  def agenda
+  def historic_ga
   end
 
-  def country_matrix
+  def unsc
   end
 
   def delegate_registrations

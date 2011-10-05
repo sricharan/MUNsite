@@ -201,10 +201,9 @@ hr { display: none; }
 
 #logo {
 	width: 1140px;
-	height: 200px;
+	height: 208px;
 	margin: 0 auto;
         margin-top : 40px;
-	padding-top: 5px;
 	padding-left: 20px;
         background: url(/images/mun-bg.png) no-repeat ;
 }
@@ -492,14 +491,12 @@ hr { display: none; }
 .clr {clear:both;}
 
 .newmenu {
-  opacity: 0.9;
+  opacity: 1;
   position: absolute;
   background: url(/images/menu-bg.jpg) repeat-x ;
-  margin: 30px;
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 52px;
   z-index:1000;
-  width:1100px;
+  width:1140px;
   height: 41px; 
   padding: 13px 10px 10px 10px ;
  }
@@ -565,7 +562,8 @@ hr { display: none; }
 }
 
 #meet_the_team-sub {
-  left: 555px;
+  left: 615px;
+
 }
 #logistics-sub {
   left: 586px;

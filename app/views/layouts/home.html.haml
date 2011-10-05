@@ -16,80 +16,70 @@
   %body
     #logo
     
+    %div.newmenu
+      %b
+        = link_to "Home" , home_index_path , :class => "has_submenu"
+      %b 
+        = link_to "About" ,home_about_path , :class => "has_submenu", :id => "about"
+      %b 
+        = link_to "Conference" ,"#", :class => "has_submenu", :id => "conference"
+      %div.submenu{:id => "conference-sub", :style => "display:none;"}
+        %ul{:style => "list-style-type:none;"} 
+          %li
+            = link_to raw("<span>Executive Board</span>") , home_eb_path
+          %li
+            = link_to raw("<span>International Press</span>") , home_ip_path
+          %li
+            = link_to raw("<span>Schedule</span>") , home_schedule_path
+          %li
+            = link_to raw("<span>Key Dates</span>") , home_key_dates_path
+          %li
+            = link_to raw("<span>Conference Fees</span>") , home_conference_fees_path
+      %b 
+        = link_to "Registrations" ,"#", :class => "has_submenu", :id => "registrations"
+      %div.submenu{:id => "registrations-sub", :style => "display:none;"}
+        %ul{:style => "list-style-type:none;"} 
+          %li
+            = link_to raw("<span>Delegate</span>") , home_coming_soon_path
+          %li
+            = link_to raw("<span>International Press</span>") , home_ip_path
+          %li
+            = link_to raw("<span>Executive Board</span>") , eb_registrations_path
+          %li
+            = link_to raw("<span>Payment Options</span>") , home_coming_soon_path
+      %b 
+        = link_to "Committees" ,"#", :class => "has_submenu", :id => "committees"
+      %div.submenu{:id => "committees-sub", :style => "display:none;width:170px;"}
+        %ul{:style => "list-style-type:none;width:170px;"} 
+          %li
+            = link_to raw("<span>Historic General Assembly</span>") , home_historic_ga_path
+          %li
+            = link_to raw("<span>UN Security Council</span>") , home_unsc_path
+      %b 
+        = link_to "Technical Resources" ,"#", :class => "has_submenu", :id => "preparation"
+      %div.submenu{:id => "preparation-sub", :style => "display:none;"}
+        %ul{:style => "list-style-type:none;"} 
+          %li
+            = link_to raw("<span>Study Guides</span>") , home_coming_soon_path
+          %li
+            = link_to raw("<span>Useful Links</span>") , home_coming_soon_path
+          %li
+            = link_to raw("<span>Conference Rules</span>") , home_coming_soon_path
+      %b
+        = link_to "Meet The Team" , home_meet_the_team_path, :class => "has_submenu", :id => "meet_the_team"
+      %b
+        = link_to "Awards" , home_awards_path, :class => "has_submenu", :id => "awards"
+      %b
+        = link_to "Contact Us" , home_coming_soon_path, :class => "has_submenu", :id => "contact_us"
+      .fblike
+        =#%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+        = # %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
     #slideshow
       #autochange
         #col1
         #col2
           %div.slides
             %div.pics
-              %div.newmenu
-                %b
-                  = link_to "Home" , home_index_path , :class => "has_submenu"
-                %b 
-                  = link_to "About" ,home_about_path , :class => "has_submenu", :id => "about"
-                %b 
-                  = link_to "Conference" ,"#", :class => "has_submenu", :id => "conference"
-                %div.submenu{:id => "conference-sub", :style => "display:none;"}
-                  %ul{:style => "list-style-type:none;"} 
-                    %li
-                      = link_to raw("<span>Executive Board</span>") , home_eb_path
-                    %li
-                      = link_to raw("<span>International Press</span>") , home_ip_path
-                    %li
-                      = link_to raw("<span>Schedule</span>") , home_schedule_path
-                    %li
-                      = link_to raw("<span>Key Dates</span>") , home_key_dates_path
-                    %li
-                      = link_to raw("<span>Conference Fees</span>") , home_conference_fees_path
-                %b 
-                  = link_to "Registrations" ,"#", :class => "has_submenu", :id => "registrations"
-                %div.submenu{:id => "registrations-sub", :style => "display:none;"}
-                  %ul{:style => "list-style-type:none;"} 
-                    %li
-                      = link_to raw("<span>Delegate</span>") , "#"
-                    %li
-                      = link_to raw("<span>International Press</span>") , home_ip_path
-                    %li
-                      = link_to raw("<span>Executive Board</span>") , eb_registrations_path
-                    %li
-                      = link_to raw("<span>Conference Fees</span>") ,  home_conference_fees_path
-                    %li
-                      = link_to raw("<span>Payment Options</span>") , "#"
-                %b 
-                  = link_to "Committees" ,"#", :class => "has_submenu", :id => "committees"
-                %div.submenu{:id => "committees-sub", :style => "display:none;"}
-                  %ul{:style => "list-style-type:none;"} 
-                    %li
-                      = link_to raw("<span>Executive Board</span>") , home_eb_path
-                    %li
-                      = link_to raw("<span>Agenda</span>") , home_agenda_path
-                    %li
-                      = link_to raw("<span>Country Matrix</span>") , home_country_matrix_path
-                %b 
-                  = link_to "Preparation" ,"#", :class => "has_submenu", :id => "preparation"
-                %div.submenu{:id => "preparation-sub", :style => "display:none;"}
-                  %ul{:style => "list-style-type:none;"} 
-                    %li
-                      = link_to raw("<span>Study Guides</span>") , "#"
-                    %li
-                      = link_to raw("<span>Useful Links</span>") , "#"
-                    %li
-                      = link_to raw("<span>Conference Rules</span>") , "#"
-                %b
-                  = link_to "Meet The Team" , "#", :class => "has_submenu", :id => "meet_the_team"
-                %div.submenu{:id => "meet_the_team-sub", :style => "display:none;"}
-                  %ul{:style => "list-style-type:none;"} 
-                    %li
-                      = link_to raw("<span>Secretary General</span>") , home_secretary_general_path
-                    %li
-                      = link_to raw("<span>Director General</span>") , home_director_general_path
-                    %li
-                      = link_to raw("<span>Under Secretary General</span>") , home_under_secretary_general_path
-                    %li
-                      = link_to raw("<span>Directors</span>") ,  home_directors_path
-                .fblike
-                  =#%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
-                  = # %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
               %div.rotator
                 %ul
                   %li.show

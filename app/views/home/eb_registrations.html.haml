@@ -5,7 +5,7 @@
 = form_for @executive_board do |executive_board|
   = executive_board.fields_for :user do |user|
     - if @executive_board.user.errors.count != 0
-      %ul{:style => "border: 5px solid #800517;"}
+      %ul{:style => "background:#FCF7C1;"}
         %h2
           These errors were encountered while saving:
         - @executive_board.user.errors.full_messages.each do |msg|
@@ -14,13 +14,13 @@
     %table{:id => "new_eb"}
       %tr
         %td
-          %b Name
+          %b Name *
         %td
           = user.text_field :full_name, :size => 25
       
       %tr
         %td
-          %b Gender 
+          %b Gender * 
         %td
           = user.radio_button (:gender, "Male") 
           = user.label "Male"
@@ -28,27 +28,27 @@
           = user.label "Female"
       %tr
         %td
-          %b Course
+          %b Course *
         %td
           = user.text_field :course, :size => 25 
       %tr
         %td
-          %b Year
+          %b Year *
         %td
           = user.text_field :year, :size => 25 
       %tr
         %td
-          %b Place of Residence
+          %b Place of Residence *
         %td
           = user.text_field :place_of_residence, :size => 25 
       %tr
         %td
-          %b Mobile Number
+          %b Mobile Number *
         %td
           = user.text_field :mobile, :size => 25 
       %tr
         %td
-          %b Email
+          %b Email *
         %td
           = user.text_field :email, :size => 25 
 
