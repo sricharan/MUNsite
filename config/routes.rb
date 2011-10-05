@@ -18,6 +18,8 @@ MUNsite::Application.routes.draw do
   match "/meet_the_team" => "home#meet_the_team", :as => "home_meet_the_team"
   match "/awards" => "home#awards", :as => "home_awards"
   match "/coming_soon" => "home#coming_soon", :as => "home_coming_soon"
+  match "/successful_registration" => "home#successful_registration", :as => "successful_registration"
+  match "/successful_updation" => "home#successful_updation", :as => "successful_updation"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

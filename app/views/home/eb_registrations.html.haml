@@ -1,7 +1,14 @@
 %div.post
   %h2.title
     = link_to  "Executive Application Form" , "#"
-
+%br
+%br
+%p{:style => "margin-left: 10px;"}
+  %i
+    If you fill incorrect details and submit, you can update by filling the WHOLE form again using the SAME EMAIL ID.
+    %br
+    (*) marked fields are mandatory
+%br 
 = form_for @executive_board do |executive_board|
   = executive_board.fields_for :user do |user|
     - if @executive_board.user.errors.count != 0

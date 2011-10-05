@@ -22,6 +22,12 @@ class HomeController < ApplicationController
   def schedule
   end
 
+  def successful_registration
+  end
+
+  def successful_updation
+  end
+
   def key_dates
   end
 
@@ -55,17 +61,20 @@ class HomeController < ApplicationController
     end
         
     if @executive_board.save 
-      UserMailer.confirmation_email(@executive_board.user).deliver
+      UserMailer.confirmation_email(@executive_board).deliver
       UserMailer.eb_registration_email(@executive_board).deliver
-      redirect_to home_index_path
+      redirect_to successful_registration_path
     else
       if @existing_eb == nil
         render :eb_registrations
       else
-        if @executive_board.user.valid? 
-          @existing_eb.update_attributes(params[:executive_board])
-        else 
+        if (@executive_board.user.full_name == nil) || (@executive_board.user.gender == nil) || (@executive_board.user.course == nil) || (@executive_board.user.year == nil) || (@executive_board.user.place_of_residence== nil) || (@executive_board.user.mobile == nil) 
           render :eb_registrations
+        else 
+          @existing_eb.destroy   #is there no way to update attributes in MTI (while checking with uniqueness of email) ?
+          @executive_board.save
+          UserMailer.eb_updation_email(@executive_board).deliver
+          redirect_to successful_updation_path 
         end  
       end
     end
