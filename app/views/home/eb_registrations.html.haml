@@ -2,8 +2,15 @@
   %h2.title
     = link_to  "Executive Application Form" , "#"
 
-- form_for @executive_board do |executive_board|
+= form_for @executive_board do |executive_board|
   = executive_board.fields_for :user do |user|
+    - if @executive_board.user.errors.count != 0
+      %ul{:style => "border: 5px solid #800517;"}
+        %h2
+          These errors were encountered while saving:
+        - @executive_board.user.errors.full_messages.each do |msg|
+          %li{:style => "list-style:none;"}
+          = msg  
     %table{:id => "new_eb"}
       %tr
         %td
@@ -60,49 +67,49 @@
         %th Position
       %tr 
         %td 
-          = executive_board.text_field :eb_mun_1, :size => 18 
+          = executive_board.text_field :eb_mun_1, :size => 15 
         %td 
-          = executive_board.text_field :eb_year_1, :size => 18 
+          = executive_board.text_field :eb_year_1, :size => 15 
         %td 
-          = executive_board.text_field :eb_council_1, :size => 18 
+          = executive_board.text_field :eb_council_1, :size => 15
         %td 
-          = executive_board.text_field :eb_position_1, :size => 18 
+          = executive_board.text_field :eb_position_1, :size => 15
       %tr 
         %td 
-          = executive_board.text_field :eb_mun_2, :size => 18 
+          = executive_board.text_field :eb_mun_2, :size => 15
         %td 
-          = executive_board.text_field :eb_year_2, :size => 18
+          = executive_board.text_field :eb_year_2, :size => 15
         %td 
-          = executive_board.text_field :eb_council_2, :size => 18 
+          = executive_board.text_field :eb_council_2, :size => 15 
         %td 
-          = executive_board.text_field :eb_position_2, :size => 18 
+          = executive_board.text_field :eb_position_2, :size => 15 
       %tr 
         %td 
-          = executive_board.text_field :eb_mun_3, :size => 18 
+          = executive_board.text_field :eb_mun_3, :size => 15
         %td  
-          = executive_board.text_field :eb_year_3, :size => 18 
+          = executive_board.text_field :eb_year_3, :size => 15 
         %td 
-          = executive_board.text_field :eb_council_3, :size => 18 
+          = executive_board.text_field :eb_council_3, :size => 15 
         %td 
-          = executive_board.text_field :eb_position_3, :size => 18 
+          = executive_board.text_field :eb_position_3, :size => 15 
       %tr 
         %td 
-          = executive_board.text_field :eb_mun_4, :size => 18 
+          = executive_board.text_field :eb_mun_4, :size => 15
         %td 
-          = executive_board.text_field :eb_year_4, :size => 18 
+          = executive_board.text_field :eb_year_4, :size => 15 
         %td 
-          = executive_board.text_field :eb_council_4, :size => 18 
+          = executive_board.text_field :eb_council_4, :size => 15 
         %td 
-          = executive_board.text_field :eb_position_4, :size => 18 
+          = executive_board.text_field :eb_position_4, :size => 15 
       %tr 
         %td 
-          = executive_board.text_field :eb_mun_5, :size => 18
+          = executive_board.text_field :eb_mun_5, :size => 15
         %td 
-          = executive_board.text_field :eb_year_5, :size => 18 
+          = executive_board.text_field :eb_year_5, :size => 15 
         %td 
-          = executive_board.text_field :eb_council_5, :size => 18 
+          = executive_board.text_field :eb_council_5, :size => 15
         %td 
-          = executive_board.text_field :eb_position_5, :size => 18 
+          = executive_board.text_field :eb_position_5, :size => 15 
   %br  
   %br
   %b{:style=> "margin-left : 10px;"}
@@ -127,49 +134,49 @@
         %th Awards (if any)
       %tr 
         %td 
-          = executive_board.text_field :d_mun_1, :size => 18 
+          = executive_board.text_field :d_mun_1, :size => 15
         %td 
-          = executive_board.text_field :d_council_1, :size => 18 
+          = executive_board.text_field :d_council_1, :size => 15 
         %td 
-          = executive_board.text_field :d_country_1, :size => 18 
+          = executive_board.text_field :d_country_1, :size => 15 
         %td 
-          = executive_board.text_field :d_awards_1, :size => 18
+          = executive_board.text_field :d_awards_1, :size => 15
       %tr 
         %td 
-          = executive_board.text_field :d_mun_2, :size => 18
+          = executive_board.text_field :d_mun_2, :size => 15
         %td 
-          = executive_board.text_field :d_council_2, :size => 18 
+          = executive_board.text_field :d_council_2, :size => 15 
         %td 
-          = executive_board.text_field :d_country_2, :size => 18 
+          = executive_board.text_field :d_country_2, :size => 15 
         %td 
-          = executive_board.text_field :d_awards_2, :size => 18
+          = executive_board.text_field :d_awards_2, :size => 15
       %tr 
         %td 
-          = executive_board.text_field :d_mun_3, :size => 18
+          = executive_board.text_field :d_mun_3, :size => 15
         %td 
-          = executive_board.text_field :d_council_3, :size => 18 
+          = executive_board.text_field :d_council_3, :size => 15 
         %td 
-          = executive_board.text_field :d_country_3, :size => 18 
+          = executive_board.text_field :d_country_3, :size => 15 
         %td 
-          = executive_board.text_field :d_awards_3, :size => 18
+          = executive_board.text_field :d_awards_3, :size => 15
       %tr 
         %td 
-          = executive_board.text_field :d_mun_4, :size => 18
+          = executive_board.text_field :d_mun_4, :size => 15
         %td 
-          = executive_board.text_field :d_council_4, :size => 18 
+          = executive_board.text_field :d_council_4, :size => 15
         %td 
-          = executive_board.text_field :d_country_4, :size => 18 
+          = executive_board.text_field :d_country_4, :size => 15 
         %td 
-          = executive_board.text_field :d_awards_4, :size => 18
+          = executive_board.text_field :d_awards_4, :size => 15
       %tr 
         %td 
-          = executive_board.text_field :d_mun_5, :size => 18
+          = executive_board.text_field :d_mun_5, :size => 15
         %td 
-          = executive_board.text_field :d_council_5, :size => 18 
+          = executive_board.text_field :d_council_5, :size => 15
         %td 
-          = executive_board.text_field :d_country_5, :size => 18 
+          = executive_board.text_field :d_country_5, :size => 15 
         %td 
-          = executive_board.text_field :d_awards_5, :size => 18
+          = executive_board.text_field :d_awards_5, :size => 15
   %br  
   %br
   %b{:style=> "margin-left : 10px;"}

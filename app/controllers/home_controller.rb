@@ -52,8 +52,10 @@ class HomeController < ApplicationController
     if @executive_board.save
       UserMailer.confirmation_email(@executive_board.user).deliver
       UserMailer.eb_registration_email(@executive_board).deliver
+      redirect_to home_index_path
+    else
+      render :eb_registrations
     end
-    redirect_to home_index_path
   end 
   
   def eb_list
