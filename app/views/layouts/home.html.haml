@@ -5,7 +5,7 @@
     - # This can be further customized here: http://developers.facebook.com/docs/reference/plugins/like/ -Anthony
     %meta{:content => "Spring Fest MUN", :property => "og:title"}/
     %meta{:content => "non_profit", :property => "og:type"}/
-    %meta{:content => "springfest", :property => "og:site_name"}/
+    %meta{:content => "iitkgpmun", :property => "og:site_name"}/
     %title
       = "IIT KGP MUN" 
     = stylesheet_link_tag  "style", "navigation_bar", "slideshow"
@@ -20,7 +20,17 @@
       %b
         = link_to "Home" , home_index_path , :class => "has_submenu"
       %b 
-        = link_to "About" ,home_about_path , :class => "has_submenu", :id => "about"
+        = link_to "About" ,"#" , :class => "has_submenu", :id => "about"
+      %div.submenu{:id => "about-sub", :style => "display:none;"}
+        %ul{:style => "list-style-type:none;"} 
+          %li
+            = link_to raw("<span>What is IITKGPMUN</span>") , home_what_is_iitkgpmun_path
+          %li
+            = link_to raw("<span>Why IITKGPMUN</span>") , home_why_iitkgpmun_path
+          %li
+            = link_to raw("<span>Team</span>") , home_team_path
+          %li
+            = link_to raw("<span>Keynote Speaker</span>") , home_keynote_speaker_path
       %b 
         = link_to "Conference" ,"#", :class => "has_submenu", :id => "conference"
       %div.submenu{:id => "conference-sub", :style => "display:none;"}
@@ -40,13 +50,13 @@
       %div.submenu{:id => "registrations-sub", :style => "display:none;"}
         %ul{:style => "list-style-type:none;"} 
           %li
-            = link_to raw("<span>Delegate</span>") , home_coming_soon_path
+            = link_to raw("<span>Executive Board</span>") , eb_registrations_path
+          %li
+            = link_to raw("<span>Delegate</span>") , home_delegate_registrations_path
           %li
             = link_to raw("<span>International Press</span>") , home_ip_path
           %li
-            = link_to raw("<span>Executive Board</span>") , eb_registrations_path
-          %li
-            = link_to raw("<span>Payment Options</span>") , home_coming_soon_path
+            = link_to raw("<span>Payment Options</span>") , home_payment_options_path
       %b 
         = link_to "Committees" ,"#", :class => "has_submenu", :id => "committees"
       %div.submenu{:id => "committees-sub", :style => "display:none;width:170px;"}
@@ -60,17 +70,17 @@
       %div.submenu{:id => "preparation-sub", :style => "display:none;"}
         %ul{:style => "list-style-type:none;"} 
           %li
-            = link_to raw("<span>Study Guides</span>") , home_coming_soon_path
+            = link_to raw("<span>Study Guides</span>") , home_study_guides_path
           %li
-            = link_to raw("<span>Useful Links</span>") , home_coming_soon_path
+            = link_to raw("<span>Useful Links</span>") , home_useful_links_path
           %li
-            = link_to raw("<span>Conference Rules</span>") , home_coming_soon_path
+            = link_to raw("<span>Conference Rules</span>") , home_conference_rules_path
       %b
         = link_to "Meet The Team" , home_meet_the_team_path, :class => "has_submenu", :id => "meet_the_team"
       %b
         = link_to "Awards" , home_awards_path, :class => "has_submenu", :id => "awards"
       %b
-        = link_to "Contact Us" , home_coming_soon_path, :class => "has_submenu", :id => "contact_us"
+        = link_to "Contact Us" , home_contact_us_path, :class => "has_submenu", :id => "contact_us"
       .fblike
         =#%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
         = # %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}

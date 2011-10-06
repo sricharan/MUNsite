@@ -5,11 +5,11 @@ MUNsite::Application.routes.draw do
   resources :user
   
   match "/index", :to => "home#index", :as => "home_index"
-  match "/about", :to => "home#about" ,:as => "home_about"
   match "/executive_board_registrations" => "home#eb_registrations", :as => "eb_registrations"
   match "/executive_board" => "home#executive_board", :as => "executive_boards"
   match "/eb" => "home#eb", :as => "home_eb"
   match "/ip" => "home#ip", :as => "home_ip"
+  match "/delegate_registrations" => "home#delegate_registrations", :as => "home_delegate_registrations"
   match "/schedule" => "home#schedule", :as => "home_schedule"
   match "/key_dates" => "home#key_dates", :as => "home_key_dates"
   match "/conference_fees" => "home#conference_fees", :as => "home_conference_fees"
@@ -20,6 +20,15 @@ MUNsite::Application.routes.draw do
   match "/coming_soon" => "home#coming_soon", :as => "home_coming_soon"
   match "/successful_registration" => "home#successful_registration", :as => "successful_registration"
   match "/successful_updation" => "home#successful_updation", :as => "successful_updation"
+  match "/what_is_iitkgpmun" => "home#what_is_iitkgpmun", :as => "home_what_is_iitkgpmun"
+  match "/why_iitkgpmun", :to => "home#why_iitkgpmun" ,:as => "home_why_iitkgpmun"
+  match "/team", :to => "home#team" ,:as => "home_team"
+  match "/keynote_speaker", :to => "home#keynote_speaker" ,:as => "home_keynote_speaker"
+  match "/payment_options", :to => "home#payment_options" ,:as => "home_payment_options"
+  match "/study_guides", :to => "home#study_guides" ,:as => "home_study_guides"
+  match "/useful_links", :to => "home#useful_links" ,:as => "home_useful_links"
+  match "/conference_rules", :to => "home#conference_rules" ,:as => "home_conference_rules"
+  match "/contact_us", :to => "home#contact_us" ,:as => "home_contact_us"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

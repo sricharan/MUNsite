@@ -1,7 +1,16 @@
 class HomeController < ApplicationController
   before_filter :authenticate_user!, :only => [:eb_list]
 
-  def about
+  def what_is_iitkgpmun
+  end
+
+  def why_iitkgpmun
+  end
+
+  def team
+  end
+
+  def keynote_speaker
   end
 
   def meet_the_team
@@ -34,6 +43,18 @@ class HomeController < ApplicationController
   def conference_fees
   end
 
+  def study_guides
+  end
+
+  def useful_links
+  end
+
+  def conference_rules
+  end
+
+  def contact_us
+  end
+
   def historic_ga
   end
 
@@ -41,8 +62,6 @@ class HomeController < ApplicationController
   end
 
   def delegate_registrations
-    @delegate = Delegate.new
-    @user = User.new
   end
  
   def eb_registrations
