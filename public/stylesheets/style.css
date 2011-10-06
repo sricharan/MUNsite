@@ -462,11 +462,15 @@ hr { display: none; }
 /* Footer */
 
 #footer {
-	width: 940px;
-	height: 120px;
-	margin: 0 auto;
-	padding: 0;
-	background: url(/images/img09.jpg) no-repeat left top;
+	width: 1130px;
+	height: 30px;
+	margin: 5px auto;
+        text-align: center;
+	padding: 15px ;
+        font-size: 11px;
+        letter-spacing: 2px;
+	background:  url(/images/menu-bg.jpg) repeat-x ;
+
 }
 
 #footer p {

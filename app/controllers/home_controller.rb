@@ -87,7 +87,7 @@ class HomeController < ApplicationController
       if @existing_eb == nil
         render :eb_registrations
       else
-        if (@executive_board.user.full_name == nil) || (@executive_board.user.gender == nil) || (@executive_board.user.course == nil) || (@executive_board.user.year == nil) || (@executive_board.user.place_of_residence== nil) || (@executive_board.user.mobile == nil) 
+        if (@executive_board.user.full_name == nil) || (@executive_board.user.gender == nil) || (@executive_board.user.course == nil) || (@executive_board.user.year == nil) || (@executive_board.user.place_of_residence== nil) || (@executive_board.user.mobile.scan(/\A[\d \+ \-]+\Z/).empty?) 
           render :eb_registrations
         else 
           @existing_eb.destroy   #is there no way to update attributes in MTI (while checking with uniqueness of email) ?
