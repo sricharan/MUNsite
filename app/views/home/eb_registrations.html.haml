@@ -9,7 +9,7 @@
 %br 
 = form_for @executive_board do |executive_board|
   = executive_board.fields_for :user do |user|
-    - if @executive_board.user.errors.count != 0
+    - if @executive_board.user.errors.count != 0 
       %ul{:style => "background:#FCF7C1;"}
         %h2
           These errors were encountered while saving:
@@ -189,6 +189,23 @@
   %br
   %br
   = executive_board.text_area :mun_experience, :style => "height:100px;width:810px;margin-left:10px"
+  %br
+  %br
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td Council Preference *
+      %td 
+        = select( "executive_board", "council_preference", { "Historic General Assembly" => "historic general assembly", "UN Security Council" => "UN security council"})
+      %td
+        = link_to "Click here for Historic General Assembly details", home_historic_ga_path , :target => "_blank", :style => "text-decoration: none;"  
+      %td
+        = link_to "Click here for UN Security Council details", home_unsc_path , :target => "_blank" , :style => "text-decoration:none;" 
+    %tr
+      %td Position Preference *
+      %td 
+        = select( "executive_board", "position_preference", { "Chair" => "chair", "Vice Chair" => "vice chair", "Director" => "director"})
   %br 
   %br 
   %br 

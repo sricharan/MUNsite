@@ -43,6 +43,8 @@ class CreateExecutiveBoards < ActiveRecord::Migration
       t.string :d_awards_4
       t.string :d_awards_5
       t.text   :mun_experience
+      t.string :council_preference
+      t.string :position_preference
       t.timestamps
     end
   end

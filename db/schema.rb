@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(:version => 20110930204957) do
     t.string   "d_awards_4"
     t.string   "d_awards_5"
     t.text     "mun_experience"
+    t.string   "council_preference"
+    t.string   "position_preference"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
