@@ -10,11 +10,11 @@ class UserMailer < ActionMailer::Base
 
   def eb_registration_email(executive_board)
     @executive_board = executive_board  # ebreg.iitkgpmun@gmail.com
-    mail(:to => "sricharan92@gmail.com", :subject => " Details after registering of #{executive_board.user.full_name} (#{executive_board.user.email}) ")
+    mail(:to => "ebreg.iitkgpmun@gmail.com", :subject => " Details after registering of #{executive_board.user.full_name} (#{executive_board.user.email}) ")
   end
 
   def eb_updation_email(executive_board)
     @executive_board = executive_board
-    mail(:to => "sricharan92@gmail.com", :subject => " Details after updation of #{executive_board.user.full_name} (#{executive_board.user.email}) ")
+    mail(:to => "ebreg.iitkgpmun@gmail.com", :subject => " Details after updation of #{executive_board.user.full_name} (#{executive_board.user.email}) ")
   end
 end
