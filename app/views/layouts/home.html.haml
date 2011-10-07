@@ -3,9 +3,9 @@
   %head
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     - # This can be further customized here: http://developers.facebook.com/docs/reference/plugins/like/ -Anthony
-    %meta{:content => "Spring Fest MUN", :property => "og:title"}/
+    %meta{:content => "iitkgpmun", :property => "og:title"}/
     %meta{:content => "non_profit", :property => "og:type"}/
-    %meta{:content => "iitkgpmun", :property => "og:site_name"}/
+    %meta{:content => "iitkgpmun.springfest.in", :property => "og:site_name"}/
     %title
       = "IIT KGP MUN" 
     = stylesheet_link_tag  "style", "navigation_bar", "slideshow"
@@ -13,7 +13,7 @@
     = csrf_meta_tag
 
 
-  %body
+  %body.abc
     #logo
     
     %div.newmenu
@@ -46,7 +46,15 @@
           %li
             = link_to raw("<span>Conference Fees</span>") , home_conference_fees_path
       %b 
-        = link_to "Registrations" ,"#", :class => "has_submenu", :id => "registrations"
+        = link_to "Committees" ,"#", :class => "has_submenu", :id => "committees"
+      %div.submenu{:id => "committees-sub", :style => "display:none;width:170px;"}
+        %ul{:style => "list-style-type:none;width:170px;"} 
+          %li
+            = link_to raw("<span>Historic General Assembly</span>") , home_historic_ga_path
+          %li
+            = link_to raw("<span>UN Security Council</span>") , home_unsc_path
+      %b 
+        = link_to "Apply" ,"#", :class => "has_submenu", :id => "registrations"
       %div.submenu{:id => "registrations-sub", :style => "display:none;"}
         %ul{:style => "list-style-type:none;"} 
           %li
@@ -57,14 +65,6 @@
             = link_to raw("<span>International Press</span>") , home_ip_path
           %li
             = link_to raw("<span>Payment Options</span>") , home_payment_options_path
-      %b 
-        = link_to "Committees" ,"#", :class => "has_submenu", :id => "committees"
-      %div.submenu{:id => "committees-sub", :style => "display:none;width:170px;"}
-        %ul{:style => "list-style-type:none;width:170px;"} 
-          %li
-            = link_to raw("<span>Historic General Assembly</span>") , home_historic_ga_path
-          %li
-            = link_to raw("<span>UN Security Council</span>") , home_unsc_path
       %b 
         = link_to "Technical Resources" ,"#", :class => "has_submenu", :id => "preparation"
       %div.submenu{:id => "preparation-sub", :style => "display:none;"}
@@ -93,9 +93,6 @@
               %div.rotator
                 %ul{:style => "margin: 0px;"}
                   %li.show
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/1.jpg", :width => "1160" }
-                  %li
                     %a{:href => "javascript:void(0)"}
                     %img{:alt => "", :height => "335" , :src => "/images/2.jpg", :width => "1160"}
                   %li
@@ -157,6 +154,6 @@
     .clr
     #footer
        
-      Copyright © - IITKGPMUN 2012 | IIT Kharagpur Model UN Conference 2012 | Site developed by Sricharan Sunder
+      Copyright © - IITKGPMUN 2012 | IIT Kharagpur Model UN Conference 2012 | Site developed by Sricharan Sunder | Logo designed by Avik Dey
 :javascript
 

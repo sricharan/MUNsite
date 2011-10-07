@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default :from => "iitkgpmun@springfest.in"
+  default :from => "iitkgpmun@gmail.com"
 
   def confirmation_email(executive_board)
     @executive_board = executive_board
-    @url = "http://iitkgpmun.heroku.com"
+    @url = "http://iitkgpmun.springfest.in"
     mail(:to => executive_board.user.email, :subject => " Thank you for registering as #{executive_board.user.resource_type}")
        
   end

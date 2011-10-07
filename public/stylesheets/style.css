@@ -548,11 +548,11 @@ hr { display: none; }
   left: 72px;
 }
 
-#committees-sub {
-  left:352px; }
+#registrations-sub {
+  left:342px; }
 
 #preparation-sub {
-  left:455px; }
+  left:410px; }
 
 #conference-sub {
   left: 139px;
@@ -563,10 +563,10 @@ hr { display: none; }
 
 }
 #logistics-sub {
-  left: 586px;
+  left: 500px;
 }
 
-#registrations-sub {
+#committees-sub {
   left: 242px;
 }
 
