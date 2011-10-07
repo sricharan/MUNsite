@@ -84,8 +84,8 @@
       %b
         = link_to "Contact Us" , home_contact_us_path, :class => "has_submenu", :id => "contact_us"
       .fblike
-        =#%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
-        = # %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
+        %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+        %fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
     #slideshow
       #autochange
         #col1
