@@ -193,17 +193,20 @@
   %br
   %br
   %br
+  %p{:style => "margin-left:10px;"}
+    %b
+      Preferences:
   %table{:id => "new_eb"}
     %tr
-      %td Council Preference *
+      %td
+        %b 
+          Council Preference *
       %td 
         = select( "executive_board", "council_preference", { "Historic General Assembly" => "historic general assembly", "UN Security Council" => "UN security council"})
-      %td
-        = link_to "Click here for Historic General Assembly details", home_historic_ga_path , :target => "_blank", :style => "text-decoration: none;"  
-      %td
-        = link_to "Click here for UN Security Council details", home_unsc_path , :target => "_blank" , :style => "text-decoration:none;" 
     %tr
-      %td Position Preference *
+      %td
+        %b
+          Position Preference *
       %td 
         = select( "executive_board", "position_preference", { "Chair" => "chair", "Vice Chair" => "vice chair", "Director" => "director"})
   %br 
