@@ -38,6 +38,11 @@
           = user.text_field :course, :size => 25 
       %tr
         %td
+          %b Institute *
+        %td
+          = user.text_field :institute, :size => 25 
+      %tr
+        %td
           %b Year *
         %td
           = user.text_field :year, :size => 25 
@@ -61,6 +66,14 @@
   %br
   %b{:style=> "margin-left: 10px;"}
     Previous Executive Board Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b Numer of MUNs as Executive Board *
+      %td
+        = executive_board.text_field :muns_as_eb, :size => 25
   %br
   %br
   #experience
@@ -128,6 +141,14 @@
   %br
   %b{:style=>"margin-left:10px;"}
     Previous Delegate Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b Numer of MUNs as Delegate *
+      %td
+        = executive_board.text_field :muns_as_delegate, :size => 25
   %br
   %br
   #experience
