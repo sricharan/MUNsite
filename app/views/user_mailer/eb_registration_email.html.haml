@@ -25,6 +25,11 @@
           = @executive_board.user.course
       %tr
         %td
+          %b Institute
+        %td
+          = @executive_board.user.institute
+      %tr
+        %td
           %b Year
         %td
           = @executive_board.user.year
@@ -48,6 +53,14 @@
   %br
   %b{:style=> "margin-left: 10px;"}
     Previous Executive Board Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b Number of MUNs as Executive Board:
+      %td
+        = @executive_board.muns_as_eb
   %br
   %br
   #experience
@@ -115,6 +128,14 @@
   %br
   %b{:style=>"margin-left:10px;"}
     Previous Delegate Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b Number of MUNs as Delegate:
+      %td
+        = @executive_board.muns_as_delegate
   %br
   %br
   #experience
