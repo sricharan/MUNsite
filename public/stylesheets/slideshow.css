@@ -1,22 +1,14 @@
-.rotator {
+#slider {
  margin: 0 auto;
  width:1160px;
- z-index:-1;
- 
+ height: 335px;
  }
 
-.rotator ul li{
-   list-style: none ;
-   position: absolute;
+#slider_two {
+ margin: 0 auto;
+ width:110px;
+ height: 110px;
  }
-
-.rotator ul {
-   padding: 0px ;
- }
-
-.rotator ul li.show { 
-
-z-index: 500; } 
 
 .pics {
 

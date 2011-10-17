@@ -12,8 +12,8 @@
 
     %title
       = "IIT KGP MUN" 
-    = stylesheet_link_tag  "style", "navigation_bar", "slideshow"
-    = javascript_include_tag "jquery", "application","rails", "navigation", "jquery.countdown.pack"
+    = stylesheet_link_tag  "style", "navigation_bar", "slideshow", "nivo-slider", "default"
+    = javascript_include_tag "jquery", "application","rails", "navigation", "jquery.countdown.pack", "jquery.nivo.slider.pack"
     = csrf_meta_tag
 
 
@@ -94,29 +94,14 @@
         #col2
           %div.slides
             %div.pics
-              %div.rotator
-                %ul{:style => "margin: 0px;"}
-                  %li.show
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/2.jpg", :width => "1160"}
-                  %li
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/3.jpg", :width => "1160"}
-                  %li
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/4.jpg", :width => "1160"}
-                  %li
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/5.jpg", :width => "1160"}
-                  %li
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/6.jpg", :width => "1160"}
-                  %li
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/7.jpg", :width => "1160"}
-                  %li
-                    %a{:href => "javascript:void(0)"}
-                    %img{:alt => "", :height => "335" , :src => "/images/8.jpg", :width => "1160"}
+              #slider
+                %img{:alt => "", :height => "335" , :src => "/images/2.jpg", :width => "1160"}
+                %img{:alt => "", :height => "335" , :src => "/images/3.jpg", :width => "1160"}
+                %img{:alt => "", :height => "335" , :src => "/images/4.jpg", :width => "1160"}
+                %img{:alt => "", :height => "335" , :src => "/images/5.jpg", :width => "1160"}
+                %img{:alt => "", :height => "335" , :src => "/images/6.jpg", :width => "1160"}
+                %img{:alt => "", :height => "335" , :src => "/images/7.jpg", :width => "1160"}
+                %img{:alt => "", :height => "335" , :src => "/images/8.jpg", :width => "1160"}
         #col3
     .clr
     #page
@@ -124,6 +109,10 @@
         #content
           = yield
         #sidebar
+          %h3 Presented to you by
+          #slider_two
+            %img{:alt => "", :height => "100" , :src => "/images/kgp.jpg", :width => "100"}
+            %img{:alt => "", :height => "100" , :src => "/images/sfslide.jpg", :width => "100"}
           %h3   Countdown to IITKGPMUN   
           #countdown 
           %br
