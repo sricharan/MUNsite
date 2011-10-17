@@ -25,7 +25,8 @@ $('#slider').nivoSlider({
 
   effect: 'fade',
   animSpeed:500,
-  pauseTime:5000
+  controlNav:false,
+  pauseTime:3000
 });
 $('#slider_two').nivoSlider({
   
@@ -33,7 +34,7 @@ $('#slider_two').nivoSlider({
   directionNav: false,
   controlNav:false,
   animSpeed:500,
-  pauseTime:5000
+  pauseTime:3000
 
 });
 window.scrollTo(0,500);
