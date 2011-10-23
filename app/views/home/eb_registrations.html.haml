@@ -13,6 +13,7 @@
       %ul{:style => "background:#FCF7C1;"}
         %h2
           These errors were encountered while saving:
+        One or more of the mandatory fields were empty or invalid.
         - @executive_board.user.errors.full_messages.each do |msg|
           %li{:style => "list-style:none;"}
           = msg  

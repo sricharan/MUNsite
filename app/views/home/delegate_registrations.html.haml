@@ -1,8 +1,190 @@
 %div.post
   %h2.title
-    = link_to "Delegate Registrations", "#"
+    = link_to  "Delegate Application Form" , "#"
+%p{:style => "margin-left: 10px;"}
+  %i
+    In case of any error discovered after submitting the form, you can re-fill the entire form with the same email id that you used.
+    %br
+    (*) marked fields are mandatory
+%br 
+= form_for @delegate do |delegate|
+  = delegate.fields_for :user do |user|
+    - if @delegate.user.errors.count != 0 
+      %ul{:style => "background:#FCF7C1;"}
+        %h2
+          These errors were encountered while saving:
+        One or more of the mandatory fields were empty or invalid.
+        - @delegate.user.errors.full_messages.each do |msg|
+          %li{:style => "list-style:none;"}
+          = msg  
+    %table{:id => "new_eb"}
+      %tr
+        %td
+          %b Name *
+        %td
+          = user.text_field :full_name, :size => 25
+      
+      %tr
+        %td
+          %b Gender * 
+        %td
+          = user.radio_button (:gender, "Male") 
+          = user.label "Male"
+          = user.radio_button (:gender, "Female") 
+          = user.label "Female"
+      %tr
+        %td
+          %b Course *
+        %td
+          = user.text_field :course, :size => 25 
+      %tr
+        %td
+          %b Institute *
+        %td
+          = user.text_field :institute, :size => 25 
+      %tr
+        %td
+          %b Year *
+        %td
+          = user.text_field :year, :size => 25 
+      %tr
+        %td
+          %b Place of Residence *
+        %td
+          = user.text_field :place_of_residence, :size => 25 
+      %tr
+        %td
+          %b Mobile Number *
+        %td
+          = user.text_field :mobile, :size => 25 
+      %tr
+        %td
+          %b Email *
+        %td
+          = user.text_field :email, :size => 25 
 
-  %div.entry
-    %p
-      Applications for Delegates will be out on Oct 20th, Keep
-      watching this space for more.
+  %br
+  %br
+  %br
+  %b{:style=>"margin-left:10px;"}
+    Previous Delegate Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b Numer of MUNs as Delegate *
+      %td
+        = delegate.text_field :muns_as_delegate, :size => 25
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:10px;"}
+      %tr
+        %th Name of MUN
+        %th Council
+        %th Country 
+        %th Awards (if any)
+      %tr 
+        %td 
+          = delegate.text_field :d_mun_1, :size => 15
+        %td 
+          = delegate.text_field :d_council_1, :size => 15 
+        %td 
+          = delegate.text_field :d_country_1, :size => 15 
+        %td 
+          = delegate.text_field :d_awards_1, :size => 15
+      %tr 
+        %td 
+          = delegate.text_field :d_mun_2, :size => 15
+        %td 
+          = delegate.text_field :d_council_2, :size => 15 
+        %td 
+          = delegate.text_field :d_country_2, :size => 15 
+        %td 
+          = delegate.text_field :d_awards_2, :size => 15
+      %tr 
+        %td 
+          = delegate.text_field :d_mun_3, :size => 15
+        %td 
+          = delegate.text_field :d_council_3, :size => 15 
+        %td 
+          = delegate.text_field :d_country_3, :size => 15 
+        %td 
+          = delegate.text_field :d_awards_3, :size => 15
+      %tr 
+        %td 
+          = delegate.text_field :d_mun_4, :size => 15
+        %td 
+          = delegate.text_field :d_council_4, :size => 15
+        %td 
+          = delegate.text_field :d_country_4, :size => 15 
+        %td 
+          = delegate.text_field :d_awards_4, :size => 15
+      %tr 
+        %td 
+          = delegate.text_field :d_mun_5, :size => 15
+        %td 
+          = delegate.text_field :d_council_5, :size => 15
+        %td 
+          = delegate.text_field :d_country_5, :size => 15 
+        %td 
+          = delegate.text_field :d_awards_5, :size => 15
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    Please Continue Writing Your MUN Experience Here:
+  %br
+  %br
+  = delegate.text_area :mun_experience, :style => "height:100px;width:810px;margin-left:10px"
+  %br
+  %br
+  %br 
+  %br 
+  %br 
+  %br 
+  %b{:style=>"margin-left:10px;"}
+    Committee-Country Preference *
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:10px;"}
+      %tr
+        %th Committee *
+        %th Country1 *
+        %th Country2 *
+        %th Country3 *
+        %th Country4 *
+      %tr 
+        %td 
+          = delegate.text_field :committee_1, :size => 13
+        %td 
+          = delegate.text_field :country_1_1, :size => 13 
+        %td 
+          = delegate.text_field :country_1_2, :size => 13 
+        %td 
+          = delegate.text_field :country_1_3, :size => 13
+        %td 
+          = delegate.text_field :country_1_4, :size => 13
+      %tr 
+        %td 
+          = delegate.text_field :committee_2, :size => 13
+        %td
+          = delegate.text_field :country_2_1, :size => 13 
+        %td 
+          = delegate.text_field :country_2_2, :size => 13 
+        %td 
+          = delegate.text_field :country_2_3, :size => 13
+        %td 
+          = delegate.text_field :country_2_4, :size => 13
+  %br 
+  %br 
+  %br 
+  %br 
+  %br 
+  %br 
+  = delegate.submit "Submit"
+  %br
+  %br
+
+   

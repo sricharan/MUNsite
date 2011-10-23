@@ -62,7 +62,38 @@ class HomeController < ApplicationController
   end
 
   def delegate_registrations
+    @delegate = Delegate.new
+    @delegate.build_user 
   end
+
+  def delegate
+    @delegate = Delegate.new( params[:delegate] )
+    @d = Delegate.all
+    @existing_d = nil
+    @d.each do |d|
+      if d.user.email == @delegate.user.email
+        @existing_d = d
+      end
+    end
+        
+    if @delegate.save 
+      UserMailer.d_registration_email(@delegate).deliver
+      redirect_to successful_registration_path
+    else
+      if @existing_d == nil
+        render :delegate_registrations
+      else
+        if (@delegate.user.full_name == nil) || (@delegate.user.gender == nil) || (@delegate.user.course == nil) || (@delegate.user.year == nil) || (@delegate.user.place_of_residence== nil) || (@delegate.user.mobile.scan(/\A[\d \+ \-]+\Z/).empty?) || (@delegate.user.institute == nil) || (@delegate.committee_1.empty?) || (@delegate.country_1_1.empty?) || (@delegate.country_1_2.empty?) ||  (@delegate.country_1_3.empty?) || (@delegate.country_1_4.empty?) || (@delegate.country_2_1.empty?) || (@delegate.country_2_2.empty?) || (@delegate.country_2_3.empty?) || (@delegate.country_2_4.empty?) || (@delegate.committee_2.empty?) || (@delegate.muns_as_delegate.empty?)
+          render :delegate_registrations
+        else 
+          @existing_d.destroy   #is there no way to update attributes in MTI (while checking with uniqueness of email) ?
+          @delegate.save
+          UserMailer.d_updation_email(@delegate).deliver
+          redirect_to successful_updation_path 
+        end  
+      end
+    end
+  end 
  
   def eb_registrations
     @executive_board = ExecutiveBoard.new

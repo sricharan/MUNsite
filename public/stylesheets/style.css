@@ -463,11 +463,11 @@ hr { display: none; }
 
 #footer {
 	width: 1130px;
-	height: 30px;
+	height: 70px;
 	margin: 5px auto;
         text-align: center;
 	padding: 15px ;
-        font-size: 11px;
+        font-size: 13px;
         letter-spacing: 2px;
 	background:  url(/images/menu-bg.jpg) repeat-x ;
 

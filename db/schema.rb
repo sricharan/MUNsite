@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111006180101) do
+ActiveRecord::Schema.define(:version => 20111018204148) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(:version => 20111006180101) do
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
   create_table "delegates", :force => true do |t|
-    t.integer  "mun_as_delegate_count", :default => 0
-    t.integer  "mun_as_exec_count",     :default => 0
     t.string   "committee_1"
     t.string   "country_1_1"
     t.string   "country_1_2"
@@ -41,6 +39,32 @@ ActiveRecord::Schema.define(:version => 20111006180101) do
     t.string   "country_2_2"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "country_1_3"
+    t.string   "country_1_4"
+    t.string   "country_2_3"
+    t.string   "country_2_4"
+    t.string   "muns_as_delegate"
+    t.string   "d_mun_1"
+    t.string   "d_mun_2"
+    t.string   "d_mun_3"
+    t.string   "d_mun_4"
+    t.string   "d_mun_5"
+    t.string   "d_council_1"
+    t.string   "d_council_2"
+    t.string   "d_council_3"
+    t.string   "d_council_4"
+    t.string   "d_council_5"
+    t.string   "d_country_1"
+    t.string   "d_country_2"
+    t.string   "d_country_3"
+    t.string   "d_country_4"
+    t.string   "d_country_5"
+    t.string   "d_awards_1"
+    t.string   "d_awards_2"
+    t.string   "d_awards_3"
+    t.string   "d_awards_4"
+    t.string   "d_awards_5"
+    t.text     "mun_experience"
   end
 
   create_table "executive_boards", :force => true do |t|
@@ -90,6 +114,8 @@ ActiveRecord::Schema.define(:version => 20111006180101) do
     t.datetime "updated_at"
     t.string   "council_preference"
     t.string   "position_preference"
+    t.string   "muns_as_eb",          :default => "0"
+    t.string   "muns_as_delegate",    :default => "0"
   end
 
   create_table "international_presses", :force => true do |t|
@@ -115,6 +141,7 @@ ActiveRecord::Schema.define(:version => 20111006180101) do
     t.integer  "resource_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "institute",          :default => "none"
   end
 
 end

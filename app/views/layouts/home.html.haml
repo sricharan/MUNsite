@@ -64,7 +64,7 @@
           %li
             = link_to raw("<span>Executive Board</span>") , eb_registrations_path
           %li
-            = link_to raw("<span>Delegate</span>") , home_delegate_registrations_path
+            = link_to raw("<span>Delegate</span>") , home_coming_soon_path
           %li
             = link_to raw("<span>International Press</span>") , home_ip_path
           %li
@@ -109,10 +109,11 @@
         #content
           = yield
         #sidebar
-          %h3 Presented to you by
           #slider_two
-            %img{:alt => "", :height => "100" , :src => "/images/kgp.jpg", :width => "100"}
-            %img{:alt => "", :height => "100" , :src => "/images/sfslide.jpg", :width => "100"}
+            %a{:href => "http://www.iitkgp.ac.in", :target => "_blank"}
+              %img{:alt => "", :height => "100" , :src => "/images/kgp.jpg", :width => "100"}
+            %a{:href => "http://www.springfest.in", :target => "_blank"}
+              %img{:alt => "", :height => "100" , :src => "/images/sfslide.jpg", :width => "100"}
           %h3   Countdown to IITKGPMUN   
           #countdown 
           %br
@@ -153,7 +154,6 @@
       = link_to "Debating Society, IIT Kharagpur", "http://www.facebook.com/pages/Debating-SocietyIIT-Kharagpur/183110725076191", :style => "text-decoration:none;", :target => "_blank"
 
       | Site developed by Sricharan Sunder
-      | Logo designed by Avik Dey 
 
 :javascript
 

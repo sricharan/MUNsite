@@ -29,6 +29,7 @@ MUNsite::Application.routes.draw do
   match "/useful_links", :to => "home#useful_links" ,:as => "home_useful_links"
   match "/conference_rules", :to => "home#conference_rules" ,:as => "home_conference_rules"
   match "/contact_us", :to => "home#contact_us" ,:as => "home_contact_us"
+  match "/delegate" => "home#delegate", :as => "delegates"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
