@@ -1,0 +1,166 @@
+%body
+  %h2
+    = "Name #{@delegate.user.full_name}" 
+  %br
+  %h2
+    = @delegate.user.email
+  %p
+    
+    %table{:id => "new_eb"}
+      %tr
+        %td
+          %b Name
+        %td
+          = @delegate.user.full_name
+      
+      %tr
+        %td
+          %b Gender 
+        %td
+          = @delegate.user.gender
+      %tr
+        %td
+          %b Course
+        %td
+          = @delegate.user.course
+      %tr
+        %td
+          %b Institute
+        %td
+          = @delegate.user.institute
+      %tr
+        %td
+          %b Year
+        %td
+          = @delegate.user.year
+      %tr
+        %td
+          %b Place of Residence
+        %td
+          = @delegate.user.place_of_residence
+      %tr
+        %td
+          %b Mobile Number
+        %td
+          = @delegate.user.mobile
+      %tr
+        %td
+          %b Email
+        %td
+          = @delegate.user.email
+
+  %br
+  %br
+  %br
+  %br
+  %br
+  %b{:style=>"margin-left:10px;"}
+    Previous Delegate Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b Number of MUNs as Delegate:
+      %td
+        = @delegate.muns_as_delegate
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:100px;"}
+      %tr
+        %th Name of MUN
+        %th Council
+        %th Country 
+        %th Awards (if any)
+      %tr 
+        %td 
+          = @delegate.d_mun_1
+        %td 
+          = @delegate.d_council_1
+        %td 
+          = @delegate.d_country_1
+        %td 
+          = @delegate.d_awards_1
+      %tr 
+        %td 
+          = @delegate.d_mun_2
+        %td 
+          = @delegate.d_council_2
+        %td 
+          = @delegate.d_country_2
+        %td 
+          = @delegate.d_awards_2
+      %tr 
+        %td 
+          = @delegate.d_mun_3
+        %td 
+          = @delegate.d_council_3
+        %td 
+          = @delegate.d_country_3
+        %td 
+          = @delegate.d_awards_3
+      %tr 
+        %td 
+          = @delegate.d_mun_4
+        %td 
+          = @delegate.d_council_4
+        %td 
+          = @delegate.d_country_4
+        %td 
+          = @delegate.d_awards_4
+      %tr 
+        %td 
+          = @delegate.d_mun_5
+        %td 
+          = @delegate.d_council_5
+        %td 
+          = @delegate.d_country_5
+        %td 
+          = @delegate.d_awards_5
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    MUN Experience:
+  %br
+  %br
+  = @delegate.mun_experience
+  %br 
+  %br 
+
+  %br 
+  %br 
+  %br
+  #experience
+    %table{ :style => "margin-left:100px;"}
+      %tr
+        %th Committee *
+        %th Country 1 * 
+        %th Country 2 *
+        %th Country 3 *
+        %th Country 4 *
+      %tr 
+        %td 
+          = @delegate.committee_1
+        %td 
+          = @delegate.country_1_1
+        %td 
+          = @delegate.country_1_2
+        %td 
+          = @delegate.country_1_3
+        %td 
+          = @delegate.country_1_4
+      %tr 
+        %td 
+          = @delegate.committee_2
+        %td 
+          = @delegate.country_2_1
+        %td 
+          = @delegate.country_2_2
+        %td 
+          = @delegate.country_2_3
+        %td 
+          = @delegate.country_2_4
+  %br
+
+   
