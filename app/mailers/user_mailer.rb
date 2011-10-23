@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def confirmation_email(executive_board)
     @executive_board = executive_board
     @url = "http://iitkgpmun.springfest.in"
-    mail(:to => executive_board.user.email, :subject => " Thank you for registering as #{executive_board.user.resource_type}", :from => "ebreg.iitkgpmun@gmail.com")
+    mail(:to => executive_board.user.email, :subject => " Thank you for registering as #{executive_board.user.resource_type}", :from => "IITKGPMUN <ebreg.iitkgpmun@gmail.com>")
        
   end
 
