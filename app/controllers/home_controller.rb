@@ -4,6 +4,9 @@ class HomeController < ApplicationController
   def what_is_iitkgpmun
   end
 
+  def travel_planning
+  end
+
   def why_iitkgpmun
   end
 
@@ -59,6 +62,14 @@ class HomeController < ApplicationController
   end
 
   def unsc
+  end
+
+  def various_cities_to_kgp
+    send_file '/home/sricharan/my_apps/MUNsite/public/travel_planning_trains.pdf', :type=>"application/pdf" 
+  end
+
+  def various_cities_to_kolkata
+    send_file '/home/sricharan/my_apps/MUNsite/public/travel_planning_flights.pdf', :type=>"application/pdf" 
   end
 
   def delegate_registrations

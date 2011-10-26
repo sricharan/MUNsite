@@ -20,10 +20,10 @@ class UserMailer < ActionMailer::Base
   
   def d_registration_email(delegate)
     @delegate = delegate  # ebreg.iitkgpmun@gmail.com
-    mail(:to => "sricharan92@gmail.com", :subject => " Details after registering of #{delegate.user.full_name} (#{delegate.user.email}) ")
+    mail(:to => "delegate.iitkgpmun@gmail.com", :subject => " Details after registering of #{delegate.user.full_name} (#{delegate.user.email}) ")
   end
   def d_updation_email(delegate)
     @delegate = delegate  # ebreg.iitkgpmun@gmail.com
-    mail(:to => "sricharan92@gmail.com", :subject => " Details after updation of #{delegate.user.full_name} (#{delegate.user.email}) ")
+    mail(:to => "delegate.iitkgpmun@gmail.com", :subject => " Details after updation of #{delegate.user.full_name} (#{delegate.user.email}) ")
   end
 end

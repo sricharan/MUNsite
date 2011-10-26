@@ -64,7 +64,7 @@
           %li
             = link_to raw("<span>Executive Board</span>") , eb_registrations_path
           %li
-            = link_to raw("<span>Delegate</span>") , home_coming_soon_path
+            = link_to raw("<span>Delegate</span>") , home_delegate_registrations_path
           %li
             = link_to raw("<span>International Press</span>") , home_ip_path
           %li
@@ -83,6 +83,8 @@
         = link_to "Meet The Team" , home_meet_the_team_path, :class => "has_submenu", :id => "meet_the_team"
       %b
         = link_to "Awards" , home_awards_path, :class => "has_submenu", :id => "awards"
+      %b 
+        = link_to "Travel Planning" ,home_travel_planning_path , :class => "has_submenu", :id => "travel_planning"
       %b
         = link_to "Contact Us" , home_contact_us_path, :class => "has_submenu", :id => "contact_us"
       .fblike
@@ -110,8 +112,7 @@
           = yield
         #sidebar
           #slider_two
-            %a{:href => "http://www.iitkgp.ac.in", :target => "_blank"}
-              %img{:alt => "", :height => "100" , :src => "/images/kgp.jpg", :width => "100"}
+            %img{:alt => "", :height => "100" , :src => "/images/dx3.jpg", :width => "100"}
             %a{:href => "http://www.springfest.in", :target => "_blank"}
               %img{:alt => "", :height => "100" , :src => "/images/sfslide.jpg", :width => "100"}
           %h3   Countdown to IITKGPMUN   
@@ -126,13 +127,10 @@
             %li 
               %h2 Announcements 
               %ul{:style => "margin:10px;"}
-                %li 
-                  Executive board applications are up.    
-                  = link_to "Click Here!" , eb_registrations_path
                 %li
-                  International Press applications will be open soon. Please keep checking.    
-                %li 
-                  Delegate applications will be open soon. Please keep checking.    
+                  %b
+                    Delegate applications are up.
+                    = link_to "Click Here!", home_delegate_registrations_path    
           %ul
             %li 
               %h2 Get Social

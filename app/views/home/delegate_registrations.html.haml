@@ -143,6 +143,13 @@
   %br 
   %br 
   %br 
+  %p{:style => "margin-left:10px;"}
+    The applicants are advised to refer to the brief synopsis and country matrix of 
+    = link_to "UN Security Council", home_unsc_path, :target => "_blank", :style => "text-decoration:none;"
+    and 
+    = link_to "Historic General Assembly", home_historic_ga_path, :target => "_blank", :style => "text-decoration:none;"
+    before applying.
+  %br 
   %b{:style=>"margin-left:10px;"}
     Committee-Country Preference *
   %br
@@ -151,10 +158,10 @@
     %table{ :style => "margin-left:10px;"}
       %tr
         %th Committee *
-        %th Country1 *
-        %th Country2 *
-        %th Country3 *
-        %th Country4 *
+        %th Country 1 *
+        %th Country 2 *
+        %th Country 3 *
+        %th Country 4 *
       %tr 
         %td 
           = delegate.text_field :committee_1, :size => 13

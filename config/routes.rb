@@ -30,6 +30,9 @@ MUNsite::Application.routes.draw do
   match "/conference_rules", :to => "home#conference_rules" ,:as => "home_conference_rules"
   match "/contact_us", :to => "home#contact_us" ,:as => "home_contact_us"
   match "/delegate" => "home#delegate", :as => "delegates"
+  match "/travel_planning", :to => "home#travel_planning" ,:as => "home_travel_planning"
+  match "/various_cities_to_kgp", :to => "home#various_cities_to_kgp" ,:as => "home_various_cities_to_kgp"
+  match "/various_cities_to_kolkata", :to => "home#various_cities_to_kolkata" ,:as => "home_various_cities_to_kolkata"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
