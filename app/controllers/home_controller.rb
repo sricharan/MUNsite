@@ -65,11 +65,11 @@ class HomeController < ApplicationController
   end
 
   def various_cities_to_kgp
-    send_file '/home/sricharan/my_apps/MUNsite/public/travel_planning_trains.pdf', :type=>"application/pdf" 
+    send_file 'http://iitkgpmun.springfest.in/travel_planning_trains.pdf', :type=>"application/pdf" 
   end
 
   def various_cities_to_kolkata
-    send_file '/home/sricharan/my_apps/MUNsite/public/travel_planning_flights.pdf', :type=>"application/pdf" 
+    send_file 'http://iitkgpmun.springfest.in/travel_planning_flights.pdf', :type=>"application/pdf" 
   end
 
   def delegate_registrations
