@@ -133,7 +133,7 @@ class HomeController < ApplicationController
   
   
   def international_press
-    @international_press = InternationalPress.new( params[:executive_board] )
+    @international_press = InternationalPress.new( params[:international_press] )
     @ip = InternationalPress.all
     @existing_ip = nil
     @ip.each do |ip|
@@ -142,7 +142,8 @@ class HomeController < ApplicationController
       end
     end
         
-    if @international_press.save 
+    if @international_press.save
+       
       UserMailer.ip_registration_email(@international_press).deliver
       redirect_to successful_registration_path
     else
