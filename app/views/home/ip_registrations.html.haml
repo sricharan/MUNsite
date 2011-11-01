@@ -163,7 +163,7 @@
         %b 
           Position Preference *
       %td 
-        = select( "international_press", "position_preference", [["Editor-in-chief", 0], ["Editor", 1], ["Journalist", 2], ["Photographer", 3]],{}, { :style => "width: 200px;height:30px;font-size:14px;"})
+        = select( "international_press", "position_preference",{ "Photographer" => "photographer" , " Journalist" => "journalist", "Editor" => "editor", "Editor-in-chief"=> "editor-in-chief"},{}, { :style => "width: 200px;height:30px;font-size:14px;"})
   %br 
   %br 
   %br 
