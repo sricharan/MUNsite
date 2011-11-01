@@ -75,32 +75,20 @@ class HomeController < ApplicationController
     @delegate.build_user 
   end
 
+  def ip_registrations
+    @international_press = InternationalPress.new
+    @international_press.build_user 
+  end
+
   def delegate
     @delegate = Delegate.new( params[:delegate] )
     @d = Delegate.all
-    @existing_d = nil
-    @d.each do |d|
-      if d.user.email == @delegate.user.email
-        @existing_d = d
-      end
-    end
-        
     if @delegate.save 
       UserMailer.d_registration_email(@delegate).deliver
       redirect_to successful_registration_path
+      Delegate.last.destroy      
     else
-      if @existing_d == nil
         render :delegate_registrations
-      else
-        if (@delegate.user.full_name == nil) || (@delegate.user.gender == nil) || (@delegate.user.course == nil) || (@delegate.user.year == nil) || (@delegate.user.place_of_residence== nil) || (@delegate.user.mobile.scan(/\A[\d \+ \-]+\Z/).empty?) || (@delegate.user.institute == nil) || (@delegate.committee_1.empty?) || (@delegate.country_1_1.empty?) || (@delegate.country_1_2.empty?) ||  (@delegate.country_1_3.empty?) || (@delegate.country_1_4.empty?) || (@delegate.country_2_1.empty?) || (@delegate.country_2_2.empty?) || (@delegate.country_2_3.empty?) || (@delegate.country_2_4.empty?) || (@delegate.committee_2.empty?) || (@delegate.muns_as_delegate.empty?)
-          render :delegate_registrations
-        else 
-          @existing_d.destroy   #is there no way to update attributes in MTI (while checking with uniqueness of email) ?
-          @delegate.save
-          UserMailer.d_updation_email(@delegate).deliver
-          redirect_to successful_updation_path 
-        end  
-      end
     end
   end 
  
@@ -143,5 +131,34 @@ class HomeController < ApplicationController
     @executive_board = ExecutiveBoard.all
   end 
   
+  
+  def international_press
+    @international_press = InternationalPress.new( params[:executive_board] )
+    @ip = InternationalPress.all
+    @existing_ip = nil
+    @ip.each do |ip|
+      if ip.user.email == @international_press.user.email
+        @existing_ip = ip
+      end
+    end
+        
+    if @international_press.save 
+      UserMailer.ip_registration_email(@international_press).deliver
+      redirect_to successful_registration_path
+    else
+      if @existing_ip == nil
+        render :ip_registrations
+      else
+        if (@international_press.user.full_name == nil) || (@international_press.user.gender == nil) || (@international_press.user.course == nil) || (@international_press.user.year == nil) || (@international_press.user.place_of_residence== nil) || (@international_press.user.mobile.scan(/\A[\d \+ \-]+\Z/).empty?) || (@international_press.position_preference == nil) || (@international_press.muns_as_ip == nil) || (@international_press.user.institute == nil)
+          render :ip_registrations
+        else 
+          @existing_ip.destroy   #is there no way to update attributes in MTI (while checking with uniqueness of email) ?
+          @international_press.save
+          UserMailer.ip_updation_email(@executive_board).deliver
+          redirect_to successful_updation_path 
+        end  
+      end
+    end
+  end 
   
 end

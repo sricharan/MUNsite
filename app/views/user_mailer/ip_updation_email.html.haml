@@ -1,0 +1,151 @@
+%body
+  %h2
+    = "Name #{@international_press.user.full_name}" 
+  %br
+  %h2
+    = @international_press.user.email
+  %p
+    
+    %table{:id => "new_eb"}
+      %tr
+        %td
+          %b Name
+        %td
+          = @international_press.user.full_name
+      
+      %tr
+        %td
+          %b Gender 
+        %td
+          = @international_press.user.gender
+      %tr
+        %td
+          %b Course
+        %td
+          = @international_press.user.course
+      %tr
+        %td
+          %b Institute
+        %td
+          = @international_press.user.institute
+      %tr
+        %td
+          %b Year
+        %td
+          = @international_press.user.year
+      %tr
+        %td
+          %b Place of Residence
+        %td
+          = @international_press.user.place_of_residence
+      %tr
+        %td
+          %b Mobile Number
+        %td
+          = @international_press.user.mobile
+      %tr
+        %td
+          %b Email
+        %td
+          = @international_press.user.email
+
+  %br
+  %br
+  %b{:style=> "margin-left: 10px;"}
+    Previous International Press Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b Number of MUNs as International Press:
+      %td
+        = @international_press.muns_as_ip
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:100px;"}
+      %tr{:style => "padding: 10px;"} 
+        %th Name of MUN
+        %th Year 
+        %th News Agency
+        %th Position
+        %th Awards
+      %tr 
+        %td 
+          = @international_press.ip_mun_1
+        %td 
+          = @international_press.ip_year_1
+        %td 
+          = @international_press.ip_news_agency_1
+        %td 
+          = @international_press.ip_position_1
+        %td 
+          = @international_press.ip_awards_1
+      %tr 
+        %td 
+          = @international_press.ip_mun_2
+        %td 
+          = @international_press.ip_year_2
+        %td 
+          = @international_press.ip_news_agency_2
+        %td 
+          = @international_press.ip_position_2
+        %td 
+          = @international_press.ip_awards_2
+      %tr 
+        %td 
+          = @international_press.ip_mun_3
+        %td 
+          = @international_press.ip_year_3
+        %td 
+          = @international_press.ip_news_agency_3
+        %td 
+          = @international_press.ip_position_3
+        %td 
+          = @international_press.ip_awards_3
+      %tr 
+        %td 
+          = @international_press.ip_mun_4
+        %td 
+          = @international_press.ip_year_4
+        %td 
+          = @international_press.ip_news_agency_4
+        %td 
+          = @international_press.ip_position_4
+        %td 
+          = @international_press.ip_awards_4
+      %tr 
+        %td 
+          = @international_press.ip_mun_5
+        %td 
+          = @international_press.ip_year_5
+        %td 
+          = @international_press.ip_news_agency_5
+        %td 
+          = @international_press.ip_position_5
+        %td 
+          = @international_press.ip_awards_5
+  %br
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    MUN Experience:
+  %br
+  %br
+  = @international_press.mun_experience
+  %br 
+  %br 
+  %p
+    %table
+      %tr
+        %td Position Preference:
+        %td
+          = @international_press.position_preference
+
+  %br 
+  %br 
+  %br
+  %br
+
+   

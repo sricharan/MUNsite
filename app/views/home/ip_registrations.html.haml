@@ -1,0 +1,175 @@
+%div.post
+  %h2.title
+    = link_to  "International Press Application Form" , "#"
+%p{:style => "margin-left: 10px;"}
+  %i
+    In case of any error discovered after submitting the form, you can re-fill the entire form with the same email id that you used.
+    %br
+    (*) marked fields are mandatory
+%br 
+= form_for @international_press do |international_press|
+  = international_press.fields_for :user do |user|
+    - if @international_press.user.errors.count != 0 
+      %ul{:style => "background:#FCF7C1;"}
+        %h2
+          These errors were encountered while saving:
+        One or more of the mandatory fields were empty or invalid.
+        - @international_press.user.errors.full_messages.each do |msg|
+          %li{:style => "list-style:none;"}
+          = msg  
+    %table{:id => "new_eb"}
+      %tr
+        %td
+          %b Name *
+        %td
+          = user.text_field :full_name, :size => 25
+      
+      %tr
+        %td
+          %b Gender * 
+        %td
+          = user.radio_button (:gender, "Male") 
+          = user.label "Male"
+          = user.radio_button (:gender, "Female") 
+          = user.label "Female"
+      %tr
+        %td
+          %b Course *
+        %td
+          = user.text_field :course, :size => 25 
+      %tr
+        %td
+          %b Institute *
+        %td
+          = user.text_field :institute, :size => 25 
+      %tr
+        %td
+          %b Year *
+        %td
+          = user.text_field :year, :size => 25 
+      %tr
+        %td
+          %b Place of Residence *
+        %td
+          = user.text_field :place_of_residence, :size => 25 
+      %tr
+        %td
+          %b Mobile Number *
+        %td
+          = user.text_field :mobile, :size => 25 
+      %tr
+        %td
+          %b Email *
+        %td
+          = user.text_field :email, :size => 25 
+
+  %br
+  %br
+  %b{:style=> "margin-left: 10px;"}
+    Previous International Press Experience
+  %br
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b 
+          Number of MUNs as International Press *
+      %td 
+        = international_press.text_field :muns_as_ip, :size => 25
+  %br
+  %br
+  #experience
+    %table{ :style => "margin-left:10px;"}
+      %tr
+        %th Name of MUN
+        %th Year of the Conference
+        %th News Agency
+        %th Position
+        %th Awards ( if any )
+      %tr 
+        %td 
+          = international_press.text_field :ip_mun_1, :size => 15 
+        %td 
+          = international_press.text_field :ip_year_1, :size => 15 
+        %td 
+          = international_press.text_field :ip_news_agency_1, :size => 15
+        %td 
+          = international_press.text_field :ip_position_1, :size => 15
+        %td 
+          = international_press.text_field :ip_awards_1, :size => 15
+      %tr 
+        %td 
+          = international_press.text_field :ip_mun_2, :size => 15 
+        %td 
+          = international_press.text_field :ip_year_2, :size => 15 
+        %td 
+          = international_press.text_field :ip_news_agency_2, :size => 15
+        %td 
+          = international_press.text_field :ip_position_2, :size => 15
+        %td 
+          = international_press.text_field :ip_awards_2, :size => 15
+      %tr 
+        %td 
+          = international_press.text_field :ip_mun_3, :size => 15 
+        %td 
+          = international_press.text_field :ip_year_3, :size => 15 
+        %td 
+          = international_press.text_field :ip_news_agency_3, :size => 15
+        %td 
+          = international_press.text_field :ip_position_3, :size => 15
+        %td 
+          = international_press.text_field :ip_awards_3, :size => 15
+      %tr 
+        %td 
+          = international_press.text_field :ip_mun_4, :size => 15 
+        %td 
+          = international_press.text_field :ip_year_4, :size => 15 
+        %td 
+          = international_press.text_field :ip_news_agency_4, :size => 15
+        %td 
+          = international_press.text_field :ip_position_4, :size => 15
+        %td 
+          = international_press.text_field :ip_awards_4, :size => 15
+      %tr 
+        %td 
+          = international_press.text_field :ip_mun_5, :size => 15 
+        %td 
+          = international_press.text_field :ip_year_5, :size => 15 
+        %td 
+          = international_press.text_field :ip_news_agency_5, :size => 15
+        %td 
+          = international_press.text_field :ip_position_5, :size => 15
+        %td 
+          = international_press.text_field :ip_awards_5, :size => 15
+  %br  
+  %br
+  %br  
+  %br
+  %b{:style=> "margin-left : 10px;"}
+    Please Continue Writing Your Experience International Press, Delegate or Executive Board:
+  %br
+  %br
+  = international_press.text_area :mun_experience, :style => "height:100px;width:810px;margin-left:10px"
+  %br
+  %br
+  %br
+  %p{:style => "margin-left : 10px;"}
+    Please refer to the brief overview and structure of our 
+    = link_to "International Press", home_ip_path, :target => "_blank" , :style => "text-decoration: none;"
+  %br
+  %table{:id => "new_eb"}
+    %tr
+      %td
+        %b 
+          Position Preference *
+      %td 
+        = select( "international_press", "position_preference", [["Editor-in-chief", 0], ["Editor", 1], ["Journalist", 2], ["Photographer", 3]],{}, { :style => "width: 200px;height:30px;font-size:14px;"})
+  %br 
+  %br 
+  %br 
+  %br 
+  = international_press.submit "Submit", :style => "width => 100px;height: 30px;font-size: 14px;"
+  %br
+  %br
+
+   

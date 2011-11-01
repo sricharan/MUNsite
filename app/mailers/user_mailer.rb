@@ -26,4 +26,16 @@ class UserMailer < ActionMailer::Base
     @delegate = delegate  # ebreg.iitkgpmun@gmail.com
     mail(:to => "delegate.iitkgpmun@gmail.com", :subject => " Details after updation of #{delegate.user.full_name} (#{delegate.user.email}) ")
   end
+
+  def ip_registration_email(international_press)
+    @international_press = international_press  # ebreg.iitkgpmun@gmail.com
+    mail(:to => "ebreg.iitkgpmun@gmail.com", :subject => " Details after registering of #{international_press.user.full_name} (#{international_press.user.email}) ")
+  end
+
+  def ip_updation_email(international_press)
+    @international_press = international_press
+    mail(:to => "ebreg.iitkgpmun@gmail.com", :subject => " Details after updation of #{international_press.user.full_name} (#{international_press.user.email}) ")
+  end
+  
+
 end
