@@ -40,7 +40,7 @@ class UserMailer < ActionMailer::Base
   def ip_confirmation_email(international_press)
     @international_press = international_press
     @url = "http://iitkgpmun.springfest.in"
-    mail(:to => international_press.user.email, :subject => " Thank you for registering as #{international_press.user.resource_type}", :from => "IITKGPMUN <ip.iitkgpmun@gmail.com>")
+    mail(:to => international_press.user.email, :subject => " Thank you for registering as International Press", :from => "IITKGPMUN <ip.iitkgpmun@gmail.com>")
   end
 
 
