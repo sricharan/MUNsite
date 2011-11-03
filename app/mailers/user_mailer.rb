@@ -5,7 +5,6 @@ class UserMailer < ActionMailer::Base
     @executive_board = executive_board
     @url = "http://iitkgpmun.springfest.in"
     mail(:to => executive_board.user.email, :subject => " Thank you for registering as #{executive_board.user.resource_type}", :from => "IITKGPMUN <ebreg.iitkgpmun@gmail.com>")
-       
   end
 
   def eb_registration_email(executive_board)
@@ -37,5 +36,12 @@ class UserMailer < ActionMailer::Base
     mail(:to => "ip.iitkgpmun@gmail.com", :subject => " Details after updation of #{international_press.user.full_name} (#{international_press.user.email}) ")
   end
   
+
+  def ip_confirmation_email(international_press)
+    @international_press = international_press
+    @url = "http://iitkgpmun.springfest.in"
+    mail(:to => international_press.user.email, :subject => " Thank you for registering as #{international_press.user.resource_type}", :from => "IITKGPMUN <ip.iitkgpmun@gmail.com>")
+  end
+
 
 end

@@ -143,6 +143,7 @@ class HomeController < ApplicationController
     end
         
     if @international_press.save
+      UserMailer.ip_confirmation_email(@international_press).deliver
        
       UserMailer.ip_registration_email(@international_press).deliver
       redirect_to successful_registration_path
