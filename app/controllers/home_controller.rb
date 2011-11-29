@@ -61,7 +61,13 @@ class HomeController < ApplicationController
   def historic_ga
   end
 
+  def historic_ga_allotments
+  end
+
   def unsc
+  end
+
+  def unsc_allotments
   end
 
   def various_cities_to_kgp
