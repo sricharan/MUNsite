@@ -192,11 +192,19 @@ hr { display: none; }
 
 /** LOGO */
 
+#logo_1 {
+	width: 1140px;
+	height: 100px;
+	margin: 0 auto;
+        margin-top : 50px;
+	padding-left: 20px;
+        background: url(/images/mun.png) no-repeat ; 
+}
+
 #logo {
 	width: 1140px;
 	height: 210px;
 	margin: 0 auto;
-        margin-top : 40px;
 	padding-left: 20px;
         background: url(/images/mun-bg.jpg) no-repeat ;
 }
