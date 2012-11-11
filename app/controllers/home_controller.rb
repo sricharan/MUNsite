@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
   before_filter :authenticate_user!, :only => [:eb_list]
 
+  def index
+   redirect_to "http://www.springfest.in/iitkgpmun"
+  end
+
   def what_is_iitkgpmun
   end
 
